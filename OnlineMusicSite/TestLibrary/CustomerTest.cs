@@ -114,5 +114,11 @@ namespace TestLibrary
             string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
+
+        [TestMethod]
+        public void FindExists()
+        {
+            clsCustomer customer = new clsCustomer();
+        }
     }
 }

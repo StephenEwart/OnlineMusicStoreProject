@@ -22,22 +22,84 @@ namespace ClassLibrary
         public string InputValidation(string customerName, string userName, string email, string password, string phoneNo, string cardDetails, string address)
         {
             //var to store any error messages
-            string error = "";
-            /*
+            int errors = 0;
+            string errorOutput = "";
             if (customerName.Length > 50)
             {
-                error = error + "name is too long";
+                errorOutput = errorOutput + "Name is too long" + Environment.NewLine;
+                errors = errors + 1;
             }
             if (customerName == "")
             {
-                error = error + "no name entered";
+                errorOutput = errorOutput + "No name entered" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (userName.Length > 50)
+            {
+                errorOutput = errorOutput + "Username is too long" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (userName == "")
+            {
+                errorOutput = errorOutput + "No userName has been entered" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (email.Length > 50)
+            {
+                errorOutput = errorOutput + "Email entered is too long" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (email == "")
+            {
+                errorOutput = errorOutput + "No email has been entered" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (password.Length > 50)
+            {
+                errorOutput = errorOutput + "Password is too long" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (password == "")
+            {
+                errorOutput = errorOutput + "No password has been entered" + Environment.NewLine;
+                errors = errors = 1;
+            }
+            if (phoneNo.Length > 10)
+            {
+                errorOutput = errorOutput + "Invalid phone number" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (cardDetails.Length > 50)
+            {
+                errorOutput = errorOutput + "Invalid card details" + Environment.NewLine;
+                errors = errors + 1;
+            }
+            if (address.Length > 200)
+            {
+                errorOutput = errorOutput + "Address is too long" + Environment.NewLine;
+                errors = errors + 1;
             }
 
-    */
+
             //if the customers name is longer than  
 
+            /*
+            note to self, add code on user interface that tells user what exactly the errors were
+            
+            should look like this
 
-            return error;
+            MessageBox.Show("There were ")
+
+            */
+
+            if (errors == 0)
+            {
+                return errorOutput;
+            }
+            else
+            {
+                return string.Format("{0}{1}", errors, errorOutput);
+            }
         }
     }
 }
