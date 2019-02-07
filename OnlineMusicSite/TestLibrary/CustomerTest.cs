@@ -87,15 +87,6 @@ namespace TestLibrary
             Assert.AreEqual(customer.mCustomerId, customerId);
         }
 
-        [TestMethod]
-        public void mDataConnectionExists()
-        {
-            clsDataConnection dataConnect = new clsDataConnection();
-            clsCustomer customer = new clsCustomer();
-            customer.dataConnect = dataConnect;
-            Assert.AreEqual(customer.dataConnect, dataConnect);
-        }
-
         /////////////////////////////////////////Methods////////////////////////////////////////
 
         [TestMethod]
@@ -119,6 +110,9 @@ namespace TestLibrary
         public void FindExists()
         {
             clsCustomer customer = new clsCustomer();
+            int customerNo = 2;
+            Boolean result = customer.Find(customerNo);
+            Assert.IsTrue(result);
         }
     }
 }
