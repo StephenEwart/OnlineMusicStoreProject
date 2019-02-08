@@ -16,5 +16,17 @@ namespace MusicSiteBackEnd
         {
             InitializeComponent();
         }
+
+        private void lstCustomers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnDelete.Enabled = true;
+            btnEdit.Enabled = true;
+        }
+
+        private void frmCustomerView_Load(object sender, EventArgs e)
+        {
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
+        }
     }
 }
