@@ -28,5 +28,20 @@ namespace MusicSiteBackEnd
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

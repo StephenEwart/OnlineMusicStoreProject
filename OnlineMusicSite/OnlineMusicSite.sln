@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrary", "TestLibrary\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSiteBackEnd", "MusicSiteBackEnd\MusicSiteBackEnd.csproj", "{938B3F2D-6835-4B7D-B407-347A5EEBA33A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSiteFrontEnd", "MusicSiteFrontEnd\MusicSiteFrontEnd.csproj", "{AE20F26C-90C0-4E9A-A99D-0BEFAE884F6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{938B3F2D-6835-4B7D-B407-347A5EEBA33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{938B3F2D-6835-4B7D-B407-347A5EEBA33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{938B3F2D-6835-4B7D-B407-347A5EEBA33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE20F26C-90C0-4E9A-A99D-0BEFAE884F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE20F26C-90C0-4E9A-A99D-0BEFAE884F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE20F26C-90C0-4E9A-A99D-0BEFAE884F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE20F26C-90C0-4E9A-A99D-0BEFAE884F6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
