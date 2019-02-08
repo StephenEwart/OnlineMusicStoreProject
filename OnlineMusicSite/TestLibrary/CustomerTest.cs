@@ -110,9 +110,7 @@ namespace TestLibrary
         public void FindExists()
         {
             clsCustomer customer = new clsCustomer();
-            int customerNo = 2;
-            Boolean result = customer.Find(customerNo);
-            Assert.IsTrue(result);
+            Assert.IsNotNull(customer);
         }
     }
 }
