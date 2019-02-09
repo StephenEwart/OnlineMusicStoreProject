@@ -7,6 +7,10 @@ namespace TestLibrary
     [TestClass]
     public class CustomerTest
     {
+
+        /// <summary>
+        /// /////////////////////////////////clsCustomer /////////////////////////////////////////////////
+        /// </summary>
         public void clsCustomerExists()
         {
             //create instance
