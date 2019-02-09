@@ -15,6 +15,6 @@ namespace MusicSiteBackEnd
         public frmAddCustomer()
         {
             InitializeComponent();
-        }
+        } 
     }
 }
