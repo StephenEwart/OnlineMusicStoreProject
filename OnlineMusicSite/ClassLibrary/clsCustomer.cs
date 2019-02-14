@@ -70,7 +70,7 @@ namespace ClassLibrary
                 errors = errors + 1;
             }
             //check if password is empty
-            if (password == "")
+            if (password.Length < 7)
             {
                 errorOutput = errorOutput + "No password has been entered" + Environment.NewLine;
                 errors = errors = 1;
