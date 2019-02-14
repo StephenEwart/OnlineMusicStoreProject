@@ -117,5 +117,994 @@ namespace TestLibrary
             clsCustomer customer = new clsCustomer();
             Assert.IsNotNull(customer);
         }
+
+        /////////////////////////////////////// Boundary Testing ////////////////////////////////////
+        /// <summary>
+        /// /////////////////////////////////// Customer Name /////////////////////////////////////////
+        /// </summary>
+
+        [TestMethod]
+        public void MinMinusOneCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+
+        }
+
+        [TestMethod]
+        public void MinBoundaryCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "a";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinPlusOneCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "AB";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxMinusOneCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "1234567890123456789012345678901234567890123456789";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "12345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOneCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "123456789012345678901234567890123456789012345678901";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidCustomerName()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            customerName = "Stephen Ewart";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        /// <summary>
+        /// ////////////////////////////////////////// Username ///////////////////////////////////////////
+        /// </summary>
+
+        [TestMethod]
+        public void MinMinusOneUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinBoundaryUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "A";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinPlusOneUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "AB";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxMinusOneUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "1234567890123456789012345678901234567890123456789";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "12345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOneUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "123456789012345678901234567890123456789012345678901";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidUsername()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            userName = "SCREwart127";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        ////////////////////////////////////////////// Email //////////////////////////////////////
+
+        [TestMethod]
+        public void MinMinusOneEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinBoundaryEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "A";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinPlusOneEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "AB";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxMinusOneEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "1234567890123456789012345678901234567890123456789";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "12345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOneEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "123456789012345678901234567890123456789012345678901";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidEmail()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            email = "SCREwart127@gmail.com";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        /// <summary>
+        /// ///////////////////////////////////// Password ///////////////////////////////////////////////
+        /// </summary>
+
+        [TestMethod]
+        public void MinMinusOnePassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "Passwo";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinBoundaryPassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "password";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MinPlusOnePassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "password1";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxMinusOnePassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "1234567890123456789012345678901234567890123456789";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryPassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "12345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOnePassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "123456789012345678901234567890123456789012345678901";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMinPassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxPassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidPassword()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            password = "Password12345";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        ////////////////////////////////////////// PhoneNo //////////////////////////////////////
+
+        [TestMethod]
+        public void MaxMinusOnePhoneNo()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            phoneNo = "12345678901234";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryPhoneNo()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            phoneNo = "123456789012345";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOnePhoneNo()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            phoneNo = "1234567890123456";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxPhoneNo()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            phoneNo = "123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidPhoneNo()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            phoneNo = "1234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        /////////////////////////////////////////// Card Details ////////////////////////////////////////////
+
+        [TestMethod]
+        public void MaxMinusOneCardDetails()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            cardDetails = "1234567890123456789012345678901234567890123456789";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryCardDetails()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            cardDetails = "12345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOneCardDetails()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            cardDetails = "123456789012345678901234567890123456789012345678901";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxCardDetails()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            cardDetails = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidCardDetails()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            cardDetails = "123456/436385763876";
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        /// <summary>
+        /// //////////////////////////////////////// Address //////////////////////////////////////////////
+        /// </summary>
+
+        [TestMethod]
+        public void MaxMinusOneAddress()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            address = "";
+            address = address.PadRight(199, 'a');
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxBoundaryAddress()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            address = "";
+            address = address.PadRight(200, 'a');
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MaxPlusOneAddress()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            address = "";
+            address = address.PadRight(201, 'a');
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void ExtremeMaxAddress()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            address = "";
+            address = address.PadRight(500, 'a');
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreNotEqual(Error, result);
+        }
+
+        [TestMethod]
+        public void MidAddress()
+        {
+            // defaults(mid) for the rest of required inputs
+            string customerName = "Calum";
+            string userName = "SCREwart";
+            string email = "screwart127@gmail.com";
+            string password = "password";
+            string phoneNo = "4896345092734";
+            string cardDetails = "3489345/356842328928";
+            string address = "10 albion street";
+            string Error = "";
+            //new changed value
+            address = "";
+            address = address.PadRight(100, 'a');
+            clsCustomer customer = new clsCustomer();
+
+            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            Assert.AreEqual(Error, result);
+        }
     }
 }
