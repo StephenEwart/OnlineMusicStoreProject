@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSiteBackEnd", "MusicSi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicSiteFrontEnd", "MusicSiteFrontEnd\MusicSiteFrontEnd.csproj", "{AE20F26C-90C0-4E9A-A99D-0BEFAE884F6E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5ACD8A84-D9CC-4BCB-BC8B-A2B62CC80EE9}"
+	ProjectSection(SolutionItems) = preProject
+		App_Data\OnlineMusicDatabase.mdf = App_Data\OnlineMusicDatabase.mdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
