@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 
 namespace MusicSiteBackEnd
 {
@@ -15,6 +16,12 @@ namespace MusicSiteBackEnd
         public frmAddCustomer()
         {
             InitializeComponent();
-        } 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            clsCustomerCollection collect = new clsCustomerCollection();
+            collect.thisCustomer.InputValidation(txtCustomerName.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, txtConfirmPassword.Text, txtPhoneNo.Text, txtCardDetails.Text, txtAddress.Text);
+        }
     }
 }
