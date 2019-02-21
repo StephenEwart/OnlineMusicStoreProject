@@ -21,7 +21,7 @@ namespace ClassLibrary
         public string mCardDetails { get; set; }
         public int mCustomerId { get; set;  }
 
-        public string InputValidation(string customerName, string userName, string email, string password, string phoneNo, string cardDetails, string address)
+        public string InputValidation(string customerName, string userName, string email, string password, string confirmPassword, string phoneNo, string cardDetails, string address)
         {
             //var to store amount of error messages
             int errors = 0;
@@ -81,6 +81,12 @@ namespace ClassLibrary
                 errorOutput = errorOutput + "Invalid phone number" + Environment.NewLine;
                 errors = errors + 1;
             }
+            //if passwords dont match
+            if (confirmPassword != password)
+            {
+                errorOutput = errorOutput + "Passwords do not match" + Environment.NewLine;
+                errors = errors + 1;
+            }
             //check if cardDetails length is greater than 50
             if (cardDetails.Length > 50)
             {
@@ -108,7 +114,7 @@ namespace ClassLibrary
 
             if (errors == 0)
             {
-                return errorOutput;
+                return "";
             }
             else
             {

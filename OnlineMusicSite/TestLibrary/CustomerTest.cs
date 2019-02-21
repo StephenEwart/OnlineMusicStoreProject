@@ -50,10 +50,10 @@ namespace TestLibrary
         [TestMethod]
         public void mPasswordExists()
         {
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             clsCustomer customer = new clsCustomer();
             customer.mPassword = password;
-            Assert.AreEqual(customer.mPassword, password);
+            Assert.AreEqual(customer.mPassword,  password);
         }
 
         [TestMethod]
@@ -101,13 +101,13 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
             string Error = "";
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -130,7 +130,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -139,7 +139,7 @@ namespace TestLibrary
             customerName = "";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
 
         }
@@ -151,7 +151,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -160,7 +160,7 @@ namespace TestLibrary
             customerName = "a";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -171,7 +171,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -180,7 +180,7 @@ namespace TestLibrary
             customerName = "AB";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -191,7 +191,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -200,7 +200,7 @@ namespace TestLibrary
             customerName = "1234567890123456789012345678901234567890123456789";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -211,7 +211,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -220,7 +220,7 @@ namespace TestLibrary
             customerName = "12345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -231,7 +231,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -240,7 +240,7 @@ namespace TestLibrary
             customerName = "123456789012345678901234567890123456789012345678901";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -251,7 +251,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -260,7 +260,7 @@ namespace TestLibrary
             customerName = "1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -271,7 +271,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -280,7 +280,7 @@ namespace TestLibrary
             customerName = "Stephen Ewart";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -295,7 +295,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -304,7 +304,7 @@ namespace TestLibrary
             userName = "";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -315,7 +315,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -324,7 +324,7 @@ namespace TestLibrary
             userName = "A";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -335,7 +335,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -344,7 +344,7 @@ namespace TestLibrary
             userName = "AB";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -355,7 +355,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -364,7 +364,7 @@ namespace TestLibrary
             userName = "1234567890123456789012345678901234567890123456789";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -375,7 +375,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -384,7 +384,7 @@ namespace TestLibrary
             userName = "12345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -395,7 +395,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -404,7 +404,7 @@ namespace TestLibrary
             userName = "123456789012345678901234567890123456789012345678901";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -415,7 +415,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -424,7 +424,7 @@ namespace TestLibrary
             userName = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -435,7 +435,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -444,7 +444,7 @@ namespace TestLibrary
             userName = "SCREwart127";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -457,7 +457,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -466,7 +466,7 @@ namespace TestLibrary
             email = "";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -477,7 +477,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -486,7 +486,7 @@ namespace TestLibrary
             email = "A";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -497,7 +497,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -506,7 +506,7 @@ namespace TestLibrary
             email = "AB";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -517,7 +517,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -526,7 +526,7 @@ namespace TestLibrary
             email = "1234567890123456789012345678901234567890123456789";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -537,7 +537,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -546,7 +546,7 @@ namespace TestLibrary
             email = "12345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -557,7 +557,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -566,7 +566,7 @@ namespace TestLibrary
             email = "123456789012345678901234567890123456789012345678901";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -577,7 +577,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -586,7 +586,7 @@ namespace TestLibrary
             email = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -597,7 +597,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -606,7 +606,7 @@ namespace TestLibrary
             email = "SCREwart127@gmail.com";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -621,7 +621,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -630,7 +630,7 @@ namespace TestLibrary
             password = "Passwo";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -641,7 +641,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -650,7 +650,7 @@ namespace TestLibrary
             password = "password";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -661,7 +661,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password1";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -670,7 +670,7 @@ namespace TestLibrary
             password = "password1";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -681,7 +681,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "1234567890123456789012345678901234567890123456789";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -690,7 +690,7 @@ namespace TestLibrary
             password = "1234567890123456789012345678901234567890123456789";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -701,7 +701,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "12345678901234567890123456789012345678901234567890";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -710,7 +710,7 @@ namespace TestLibrary
             password = "12345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -721,7 +721,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "123456789012345678901234567890123456789012345678901";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -730,7 +730,7 @@ namespace TestLibrary
             password = "123456789012345678901234567890123456789012345678901";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -741,7 +741,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -750,7 +750,7 @@ namespace TestLibrary
             password = "";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -761,7 +761,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -770,7 +770,7 @@ namespace TestLibrary
             password = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -781,7 +781,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "Password12345";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -790,7 +790,7 @@ namespace TestLibrary
             password = "Password12345";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -803,7 +803,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -812,7 +812,7 @@ namespace TestLibrary
             phoneNo = "12345678901234";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -823,7 +823,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -832,7 +832,7 @@ namespace TestLibrary
             phoneNo = "123456789012345";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -843,7 +843,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -852,7 +852,7 @@ namespace TestLibrary
             phoneNo = "1234567890123456";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -863,7 +863,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -872,7 +872,7 @@ namespace TestLibrary
             phoneNo = "123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -883,7 +883,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -892,7 +892,7 @@ namespace TestLibrary
             phoneNo = "1234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -905,7 +905,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -914,7 +914,7 @@ namespace TestLibrary
             cardDetails = "1234567890123456789012345678901234567890123456789";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -925,7 +925,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -934,7 +934,7 @@ namespace TestLibrary
             cardDetails = "12345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -945,7 +945,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -954,7 +954,7 @@ namespace TestLibrary
             cardDetails = "123456789012345678901234567890123456789012345678901";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -965,7 +965,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -974,7 +974,7 @@ namespace TestLibrary
             cardDetails = "123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -985,7 +985,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -994,7 +994,7 @@ namespace TestLibrary
             cardDetails = "123456/436385763876";
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -1009,7 +1009,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -1019,7 +1019,7 @@ namespace TestLibrary
             address = address.PadRight(199, 'a');
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -1030,7 +1030,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -1040,7 +1040,7 @@ namespace TestLibrary
             address = address.PadRight(200, 'a');
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
 
@@ -1051,7 +1051,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -1061,7 +1061,7 @@ namespace TestLibrary
             address = address.PadRight(201, 'a');
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -1072,7 +1072,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -1082,7 +1082,7 @@ namespace TestLibrary
             address = address.PadRight(500, 'a');
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreNotEqual(Error, result);
         }
 
@@ -1093,7 +1093,7 @@ namespace TestLibrary
             string customerName = "Calum";
             string userName = "SCREwart";
             string email = "screwart127@gmail.com";
-            string password = "password";
+            string password = "password";   string confirmPassword = "password";
             string phoneNo = "4896345092734";
             string cardDetails = "3489345/356842328928";
             string address = "10 albion street";
@@ -1103,7 +1103,7 @@ namespace TestLibrary
             address = address.PadRight(100, 'a');
             clsCustomer customer = new clsCustomer();
 
-            string result = customer.InputValidation(customerName, userName, email, password, phoneNo, cardDetails, address);
+            string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
     }
