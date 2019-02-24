@@ -24,7 +24,7 @@ namespace TestLibrary
             //create an instance of the class we want to create 
             clsAlbumCollection AllAlbums = new clsAlbumCollection();
             //create some test data to assign to the property 
-            Int32 SomeCount = 1;
+            Int32 SomeCount = 0;
             //assign the data to the property
             AllAlbums.Count = SomeCount;
             //test to see that the 2 values are the same
@@ -53,6 +53,26 @@ namespace TestLibrary
             Assert.AreEqual(Albums.AllAlbums, TestList);
         }
 
+        public void CountMatchesList()
+        {
+            //create an instance of the class we want to create 
+            clsAlbumCollection Albums = new clsAlbumCollection();
+            //create some test data to assign to the property 
+            //in this case the data needs to be a list of objects
+            List<clsAlbum> TestList = new List<clsAlbum>();
+            //set its properties
+            //create the item of test data
+            clsAlbum TestItem = new clsAlbum();
+            //set its properties 
+            TestItem.AlbumNo = 1;
+            TestItem.Album = "Lil Wayne";
+            //add the item to the property
+            TestList.Add(TestItem);
+            //assign the data to the property
+            Albums.AllAlbums = TestList;
+            //test to see that the 2 values are the same 
+            Assert.AreEqual(Albums.Count, TestList.Count);
+        }
 
 
 
