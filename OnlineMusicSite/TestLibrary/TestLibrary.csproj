@@ -48,7 +48,6 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlbumCollectionTest.cs" />
     <Compile Include="AlbumTest.cs" />
     <Compile Include="ArtistCollectionTest.cs" />
     <Compile Include="ArtistTest.cs" />
