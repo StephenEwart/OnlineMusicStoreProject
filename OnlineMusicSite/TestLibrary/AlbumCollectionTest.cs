@@ -8,18 +8,18 @@ namespace TestLibrary
     [TestClass]
     public class AlbumCollectionTest
     {
-       
-            [TestMethod]
-            public void InstanceOK()
-            {
-                //create an instance of the class we want to create 
-                clsAlbumCollection AllAlbums = new clsAlbumCollection();
-                //test to see that it exists
-                Assert.IsNotNull(AllAlbums);
-            }
 
         [TestMethod]
-        public void CountPropertyOK()
+        public void InstanceOK()
+        {
+            //create an instance of the class we want to create 
+            clsAlbumCollection AllAlbums = new clsAlbumCollection();
+            //test to see that it exists
+            Assert.IsNotNull(AllAlbums);
+        }
+
+        [TestMethod]
+        public void AlbumPropertyOK()
         {
             //create an instance of the class we want to create 
             clsAlbumCollection AllAlbums = new clsAlbumCollection();
@@ -31,6 +31,13 @@ namespace TestLibrary
             Assert.AreEqual(AllAlbums.Count, SomeCount);
         }
 
+        public void TwoAlbumsPresent()
+        {
+            //create an instance of the class we want to create 
+            clsAlbumCollection Albums = new clsAlbumCollection();
+            //test to see that the 2 values are the same 
+            Assert.AreEqual(Albums.Count, 2);
+        }
         [TestMethod]
         public void AllAlbumsOK()
         {
@@ -53,7 +60,7 @@ namespace TestLibrary
             Assert.AreEqual(Albums.AllAlbums, TestList);
         }
 
-        public void CountMatchesList()
+        public void AlbumMatchesList()
         {
             //create an instance of the class we want to create 
             clsAlbumCollection Albums = new clsAlbumCollection();
@@ -74,7 +81,6 @@ namespace TestLibrary
             Assert.AreEqual(Albums.Count, TestList.Count);
         }
 
-
-
+      
     }
 }

@@ -75,6 +75,7 @@ namespace TestLibrary
             //test to see the 2 value are the same 
             Assert.AreEqual(AnAlbum.AlbumNo, AlbumNo);
         }
+      
 
         [TestMethod]
         public void ValidMethodOK()
@@ -137,7 +138,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumReleasedateMinLessOne()
+        public void AlbumReleaseDateMinLessOne()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
