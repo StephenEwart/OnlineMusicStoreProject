@@ -61,11 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddArtist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddArtist.Designer.cs">
+      <DependentUpon>frmAddArtist.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArtistView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArtistView.Designer.cs">
+      <DependentUpon>frmArtistView.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCustomerView.cs">
       <SubType>Form</SubType>
@@ -81,8 +93,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddArtist.resx">
+      <DependentUpon>frmAddArtist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArtistView.resx">
+      <DependentUpon>frmArtistView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerView.resx">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
