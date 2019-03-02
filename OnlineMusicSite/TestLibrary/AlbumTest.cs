@@ -16,7 +16,7 @@ namespace TestLibrary
             Assert.IsNotNull(AnAblum);
         }
         [TestMethod]
-        public void AlbumNameOK()
+        public void AlbumPropertyOK()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();

@@ -45,9 +45,22 @@ namespace ClassLibrary
             }
         }
 
+        //public constructor for the class 
         public clsAlbumCollection()
         {
-
+            //create an instance of the album class to store a album
+            clsAlbum AAlbum = new clsAlbum();
+            //set the album to 
+            AAlbum.Album = "Tha Carter V";
+            //add the album to the private list of alnums
+            mAllAlbums.Add(AAlbum);
+            //re initialise the aalbum object to accept a new item
+            AAlbum = new clsAlbum();
+            //set the album to the private list of albums 
+            AAlbum.Album = "KamiKaze";
+            //add the second album to the private list 
+            AllAlbums.Add(AAlbum);
+            //the private list now contains 2 albums
         }
 
     }
