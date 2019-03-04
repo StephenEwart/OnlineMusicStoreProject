@@ -123,5 +123,25 @@ namespace MusicSiteBackEnd
             //make the form visible
             addCustomer.Visible = true;
         }
+
+        private void addToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //create object based on frmAddArtist
+            frmAddArtist addArtist = new frmAddArtist();
+            //make the object a child of mdi parent 
+            addArtist.MdiParent = this;
+            //make the form visible
+            addArtist.Visible = true;
+        }
+
+        private void manageToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //create object based on frmAddArtist
+            frmArtistView artistList = new frmArtistView();
+            //make the object a child of mdi parent 
+            artistList.MdiParent = this;
+            //make the form visible
+            artistList.Visible = true;
+        }
     }
 }
