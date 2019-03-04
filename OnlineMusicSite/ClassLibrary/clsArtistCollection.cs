@@ -40,19 +40,28 @@ namespace ClassLibrary
         //public constructor for the class
         public clsArtistCollection()
         {
-            //create an instance of clsArtist
-            clsArtist AnArtist = new clsArtist();
-            //set the artist to "Drake"
-            AnArtist.Artist = "Drake";
-            //add the artist to the private list of artists
-            mAllArtists.Add(AnArtist);
-            //re initialise the AnArtist object to accept a new item
-            AnArtist = new clsArtist();
-            //set the artist to Taylor Swift
-            AnArtist.Artist = "Taylor Swift";
-            //add the second artist to the private list of artists
-            mAllArtists.Add(AnArtist);
-            //the private list now contains two artists
+            //create an instance of the data connection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure to get the list of data
+            DB.Execute("sproc_tblArtist_SelectAll");
+            //get the count of records 
+            Int32 RecordCount = DB.Count;
+            //set up the index for the loop
+            Int32 Index = 0;
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a new instance of the artist class
+                clsArtist AnArtist = new clsArtist();
+                //get the artist name
+                AnArtist.Artist = DB.DataTable.Rows[Index]["Artist"].ToString();
+                //get the primary key
+                AnArtist.ArtistNo = Convert.ToInt32(DB.DataTable.Rows[Index]["ArtistNo"]);
+                //add the artist to the private data member
+                mAllArtists.Add(AnArtist);
+                //increment the index
+                Index++;
+            }
         }
     }
 }

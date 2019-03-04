@@ -22,7 +22,7 @@ namespace TestLibrary
             //create an instance of clsArtistCollection
             clsArtistCollection AllArtists = new clsArtistCollection();
             //create some test data to asssign to the property
-            Int32 SomeCount = 2;
+            Int32 SomeCount = 3;
             //assign the data to the property
             AllArtists.Count = SomeCount;
             //test to see that the two values are the same
@@ -40,8 +40,8 @@ namespace TestLibrary
             //create the item of test data
             clsArtist TestItem = new clsArtist();
             //set its properties
-            TestItem.ArtistNo = 1;
-            TestItem.Artist = "Drake";
+            TestItem.ArtistNo = 4;
+            TestItem.Artist = "Dave";
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
@@ -49,14 +49,15 @@ namespace TestLibrary
             //test to see that the two values are the same
             Assert.AreEqual(Artists.AllArtists, TestList);
         }
-
-        [TestMethod]
-        public void TwoArtistsPresent()
+        /*
+        [testmethod]
+        public void twoartistspresent()
         {
-            //create an instance of clsArtistCollection
-            clsArtistCollection Artists = new clsArtistCollection();
-            //test to see that the two values are the same
-            Assert.AreEqual(Artists.Count, 2);
+            create an instance of clsartistcollection
+            clsartistcollection artists = new clsartistcollection();
+            test to see that the two values are the same
+            assert.areequal(artists.count, 2);
         }
+        */
     }
 }
