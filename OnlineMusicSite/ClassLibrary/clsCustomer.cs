@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace ClassLibrary
@@ -75,6 +76,11 @@ namespace ClassLibrary
                 errorOutput = errorOutput + "No password has been entered" + Environment.NewLine;
                 errors = errors = 1;
             }
+            //add REGex stuff here for password?
+
+
+
+
             //check if phoneNo legth is greater than 10
             if (phoneNo.Length > 15)
             {

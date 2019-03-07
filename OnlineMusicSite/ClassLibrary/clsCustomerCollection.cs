@@ -10,26 +10,50 @@ namespace ClassLibrary
     {
         public clsDataConnection dataConnect;
 
-        public clsCustomer thisCustomer { get; set; }
+        public clsCustomer mThisCustomer { get; set; }
+        private List<clsCustomer> mAllCustomers;
 
         public bool Delete(int customerId)
         {
             return true;
         }
 
-        public List<clsCustomer> customerList()
-        {
-            throw new NotImplementedException();
-        }
-        /*
         public int Count
         {
-            get dataConnect.count;
+            get
+            {
+                return mAllCustomers.Count;
+            }
         }
-        */
+        
+        public List<clsCustomer> customerList
+        {
+            get
+            {
+                return mAllCustomers;
+            }
+            set
+            {
+                mAllCustomers = value;
+            }
+        }
+        
         public int Add()
         {
-            return 2;
+            /*
+            clsDataConnection dataConnect = new clsDataConnection();
+
+            dataConnect.AddParameter("", );
+            dataConnect.AddParameter("",);
+            dataConnect.AddParameter("",);
+            dataConnect.AddParameter("",);
+            dataConnect.AddParameter("",);
+            dataConnect.AddParameter("",);
+            dataConnect.AddParameter("",);
+            dataConnect.AddParameter("",);
+            return true
+            */
+            return 1;
         }
 
         public void Update()
@@ -37,11 +61,5 @@ namespace ClassLibrary
 
         }
 
-        public void FilterByCustomerName(string customerName)
-        {
-            dataConnect = new clsDataConnection();
-            dataConnect.AddParameter("@customerName", customerName);
-            dataConnect.Execute("sproc_tblCustomer_FilterByCustomerName");
-        }
     }
 }

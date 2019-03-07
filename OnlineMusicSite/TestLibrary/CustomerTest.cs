@@ -110,13 +110,18 @@ namespace TestLibrary
             string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
-
+        /*
         [TestMethod]
         public void FindExists()
         {
             clsCustomer customer = new clsCustomer();
-            Assert.IsNotNull(customer);
+            bool found = false;
+            int customerNo = 1;
+            found = customer.Find(customerNo);
+            Assert.IsTrue(found);
         }
+        */
+
 
         /////////////////////////////////////// Boundary Testing ////////////////////////////////////
         /// <summary>

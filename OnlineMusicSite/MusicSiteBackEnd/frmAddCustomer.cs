@@ -21,10 +21,10 @@ namespace MusicSiteBackEnd
         private void btnAdd_Click(object sender, EventArgs e)
         {
             clsCustomerCollection collect = new clsCustomerCollection();
-            string outcome = collect.thisCustomer.InputValidation(txtCustomerName.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, txtConfirmPassword.Text, txtPhoneNo.Text, txtCardDetails.Text, txtAddress.Text);
+            string outcome = collect.mThisCustomer.InputValidation(txtCustomerName.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, txtConfirmPassword.Text, txtPhoneNo.Text, txtCardDetails.Text, txtAddress.Text);
             if (outcome == "")
             {
-                
+
             }
         }
     }
