@@ -419,6 +419,7 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
 
+        [TestMethod]
         public void ArtistNameExtremeMax()
         {
             //create an instance of clsArtist
@@ -435,6 +436,7 @@ namespace TestLibrary
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
         public void ArtistGenreExtremeMax()
         {
             //create an instance of clsArtist
@@ -451,6 +453,7 @@ namespace TestLibrary
             Assert.AreNotEqual(Error, "");
         }
 
+        [TestMethod]
         public void ArtistBioExtremeMax()
         {
             //create an instance of clsArtist
@@ -465,6 +468,109 @@ namespace TestLibrary
             Error = AnArtist.Valid(SomeArtist);
             //test to see that the result is NOT OK i.e there should be an error message
             Assert.AreNotEqual(Error, "");
+        }
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsArtist AnArtist = new clsArtist();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 ArtistNo = 1;
+            //invoke the method
+            Found = AnArtist.Find(ArtistNo);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestArtistNoFound()
+        {
+            //create an instance of the class we want to create
+            clsArtist AnArtist = new clsArtist();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK 
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ArtistNo = 21;
+            //invoke the method
+            Found = AnArtist.Find(ArtistNo);
+            //check the ArtistNo
+            if (AnArtist.ArtistNo != 21)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestArtistNameFound()
+        {
+            //create an instance of the class we want to create
+            clsArtist AnArtist = new clsArtist();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK 
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ArtistNo = 21;
+            //invoke the method
+            Found = AnArtist.Find(ArtistNo);
+            //check the ArtistNo
+            if (AnArtist.ArtistName != "Drake")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestArtistGenreFound()
+        {
+            //create an instance of the class we want to create
+            clsArtist AnArtist = new clsArtist();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK 
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ArtistNo = 21;
+            //invoke the method
+            Found = AnArtist.Find(ArtistNo);
+            //check the ArtistNo
+            if (AnArtist.ArtistGenre != "Rap")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestArtistBioFound()
+        {
+            //create an instance of the class we want to create
+            clsArtist AnArtist = new clsArtist();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //boolean variable to record if data is OK 
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 ArtistNo = 21;
+            //invoke the method
+            Found = AnArtist.Find(ArtistNo);
+            //check the ArtistNo
+            if (AnArtist.ArtistBio != "Rapper")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
         }
     }
 }
