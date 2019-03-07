@@ -36,6 +36,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
+            this.btnPopulate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -82,7 +83,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(92, 345);
+            this.btnDelete.Location = new System.Drawing.Point(330, 344);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 5;
@@ -91,7 +92,7 @@
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(211, 345);
+            this.btnSort.Location = new System.Drawing.Point(249, 344);
             this.btnSort.Name = "btnSort";
             this.btnSort.Size = new System.Drawing.Size(75, 23);
             this.btnSort.TabIndex = 6;
@@ -100,18 +101,28 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(329, 344);
+            this.btnEdit.Location = new System.Drawing.Point(168, 344);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 7;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
+            // btnPopulate
+            // 
+            this.btnPopulate.Location = new System.Drawing.Point(87, 344);
+            this.btnPopulate.Name = "btnPopulate";
+            this.btnPopulate.Size = new System.Drawing.Size(75, 23);
+            this.btnPopulate.TabIndex = 8;
+            this.btnPopulate.Text = "Populate";
+            this.btnPopulate.UseVisualStyleBackColor = true;
+            // 
             // frmArtistView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 423);
+            this.Controls.Add(this.btnPopulate);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnDelete);
@@ -137,5 +148,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSort;
         private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnPopulate;
     }
 }

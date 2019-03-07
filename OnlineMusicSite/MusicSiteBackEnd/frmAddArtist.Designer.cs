@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.lblArtistName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtArtistName = new System.Windows.Forms.TextBox();
             this.lblArtistGenre = new System.Windows.Forms.Label();
             this.lblArtistBio = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnOk = new System.Windows.Forms.Button();
+            this.txtGenre = new System.Windows.Forms.TextBox();
+            this.txtBio = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblArtistName
@@ -47,12 +48,12 @@
             this.lblArtistName.TabIndex = 0;
             this.lblArtistName.Text = "Artist Name";
             // 
-            // textBox1
+            // txtArtistName
             // 
-            this.textBox1.Location = new System.Drawing.Point(104, 67);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(149, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtArtistName.Location = new System.Drawing.Point(104, 67);
+            this.txtArtistName.Name = "txtArtistName";
+            this.txtArtistName.Size = new System.Drawing.Size(149, 20);
+            this.txtArtistName.TabIndex = 1;
             // 
             // lblArtistGenre
             // 
@@ -72,28 +73,29 @@
             this.lblArtistBio.TabIndex = 3;
             this.lblArtistBio.Text = "Artist Bio";
             // 
-            // textBox2
+            // txtGenre
             // 
-            this.textBox2.Location = new System.Drawing.Point(104, 103);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtGenre.Location = new System.Drawing.Point(104, 103);
+            this.txtGenre.Name = "txtGenre";
+            this.txtGenre.Size = new System.Drawing.Size(149, 20);
+            this.txtGenre.TabIndex = 4;
             // 
-            // textBox3
+            // txtBio
             // 
-            this.textBox3.Location = new System.Drawing.Point(104, 140);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(149, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtBio.Location = new System.Drawing.Point(104, 140);
+            this.txtBio.Name = "txtBio";
+            this.txtBio.Size = new System.Drawing.Size(149, 20);
+            this.txtBio.TabIndex = 5;
             // 
-            // btnOk
+            // btnSubmit
             // 
-            this.btnOk.Location = new System.Drawing.Point(239, 236);
-            this.btnOk.Name = "btnOk";
-            this.btnOk.Size = new System.Drawing.Size(75, 23);
-            this.btnOk.TabIndex = 6;
-            this.btnOk.Text = "Ok";
-            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnSubmit.Location = new System.Drawing.Point(239, 236);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnCancel
             // 
@@ -103,19 +105,30 @@
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Location = new System.Drawing.Point(236, 284);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(45, 13);
+            this.lblError.TabIndex = 8;
+            this.lblError.Text = "[lblError]";
             // 
             // frmAddArtist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 271);
+            this.ClientSize = new System.Drawing.Size(326, 319);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnOk);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtBio);
+            this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.lblArtistBio);
             this.Controls.Add(this.lblArtistGenre);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtArtistName);
             this.Controls.Add(this.lblArtistName);
             this.Name = "frmAddArtist";
             this.Text = "frmAddArtist";
@@ -127,12 +140,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblArtistName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtArtistName;
         private System.Windows.Forms.Label lblArtistGenre;
         private System.Windows.Forms.Label lblArtistBio;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.TextBox txtGenre;
+        private System.Windows.Forms.TextBox txtBio;
+        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblError;
     }
 }

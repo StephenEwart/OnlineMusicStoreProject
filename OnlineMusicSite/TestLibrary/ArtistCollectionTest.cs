@@ -49,15 +49,15 @@ namespace TestLibrary
             //test to see that the two values are the same
             Assert.AreEqual(Artists.AllArtists, TestList);
         }
-        /*
-        [testmethod]
-        public void twoartistspresent()
+        
+        [TestMethod]
+        public void TwoArtistsPresent()
         {
-            create an instance of clsartistcollection
-            clsartistcollection artists = new clsartistcollection();
-            test to see that the two values are the same
-            assert.areequal(artists.count, 2);
+            //create an instance of clsartistcollection
+            clsArtistCollection Artists = new clsArtistCollection();
+            //test to see that the two values are the same
+            Assert.AreEqual(Artists.Count, 2);
         }
-        */
+        
     }
 }
