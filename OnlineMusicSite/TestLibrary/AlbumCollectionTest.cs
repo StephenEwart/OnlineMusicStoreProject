@@ -51,7 +51,7 @@ namespace TestLibrary
             clsAlbum TestItem = new clsAlbum();
             //set its properties 
             TestItem.AlbumNo = 1;
-            TestItem.Album = "Lil Wayne";
+            TestItem.Album = "Tha Carter V";
             //add the item to the property
             TestList.Add(TestItem);
             //assign the data to the property
@@ -72,7 +72,7 @@ namespace TestLibrary
             clsAlbum TestItem = new clsAlbum();
             //set its properties 
             TestItem.AlbumNo = 1;
-            TestItem.Album = "Lil Wayne";
+            TestItem.Album = "Tha Carter V";
             //add the item to the property
             TestList.Add(TestItem);
             //assign the data to the property

@@ -28,12 +28,12 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreOK()
+        public void ArtistIDOK()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
             //create some test data to assign to the property
-            string SomeAlbum = "Rap/Hip-Hop";
+            string SomeAlbum = "1234";
             AnAlbum.Album = SomeAlbum;
             //test to see the 2 value are the same 
             Assert.AreEqual(AnAlbum.Album, SomeAlbum);
@@ -108,7 +108,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreMinLessOne()
+        public void ArtistIDMinLessOne()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -166,7 +166,7 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
         [TestMethod]
-        public void AlbumGenreMinBoundry()
+        public void ArtistIDMinBoundry()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -225,7 +225,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreMinPlusOne()
+        public void ArtistIDMinPlusOne()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -282,7 +282,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreMaxLessOne()
+        public void ArtistIDMaxLessOne()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -340,7 +340,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreMaxBoundry()
+        public void ArtistIDMaxBoundry()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -397,7 +397,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreMaxPlusOne()
+        public void ArtistIDMaxPlusOne()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -454,7 +454,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AlbumGenreMid()
+        public void ArtistIDMid()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -512,7 +512,7 @@ namespace TestLibrary
             Assert.AreNotEqual(Error, "");
         }
         [TestMethod]
-        public void AlbumGenreExtremeMax()
+        public void ArtistIDExtremeMax()
         {
             //create an instance of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();

@@ -59,8 +59,32 @@ namespace ClassLibrary
             //set the album to the private list of albums 
             AAlbum.Album = "KamiKaze";
             //add the second album to the private list 
-            AllAlbums.Add(AAlbum);
+            mAllAlbums.Add(AAlbum);
             //the private list now contains 2 albums
+
+            ////create an instance of the dataconnection
+            //clsDataConnection DB = new clsDataConnection();
+            ////execute the stored procedure to get the list of data
+            //DB.Execute("sproc_tblAlbum_selectAll");
+            ////get the count of records 
+            //Int32 RecordCount = DB.Count;
+            ////set up the index for the loop
+            //Int32 Index = 0;
+            ////while there are records to process
+            //while (Index < RecordCount)
+            //{
+            //    //create a new instance of the album class
+            //    clsAlbum AAlbum = new clsAlbum();
+            //    //get the album name 
+            //    AAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
+            //    //get the primary key
+            //    AAlbum.AlbumNo = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumNo"]);
+            //    //add the county to the private data member
+            //    mAllAlbums.Add(AAlbum);
+            //    //increment the index 
+            //    Index++;
+            //}
+
         }
 
     }
