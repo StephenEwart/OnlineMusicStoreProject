@@ -60,16 +60,16 @@ namespace TestLibrary
 
         [TestMethod]
 
-        public void ArtistNoOK()
+        public void ArtistIDOK()
         {
             //create an instance of clsArtist
             clsArtist AnArtist = new clsArtist();
             //test data to assign to property
-            Int32 ArtistNo = 1;
+            Int32 ArtistID = 1;
             //test data assigned to property
-            AnArtist.ArtistNo = ArtistNo;
+            AnArtist.ArtistID = ArtistID;
             //a test to see the two values are the same
-            Assert.AreEqual(AnArtist.ArtistNo, ArtistNo);
+            Assert.AreEqual(AnArtist.ArtistID, ArtistID);
         }
 
         [TestMethod]
@@ -478,15 +478,15 @@ namespace TestLibrary
             //boolean variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 ArtistNo = 1;
+            Int32 ArtistID = 1;
             //invoke the method
-            Found = AnArtist.Find(ArtistNo);
+            Found = AnArtist.Find(ArtistID);
             //test to see that the result is correct
             Assert.IsTrue(Found);
         }
 
         [TestMethod]
-        public void TestArtistNoFound()
+        public void TestArtistIDFound()
         {
             //create an instance of the class we want to create
             clsArtist AnArtist = new clsArtist();
@@ -495,11 +495,11 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistNo = 21;
+            Int32 ArtistID = 21;
             //invoke the method
-            Found = AnArtist.Find(ArtistNo);
-            //check the ArtistNo
-            if (AnArtist.ArtistNo != 21)
+            Found = AnArtist.Find(ArtistID);
+            //check the ArtistID
+            if (AnArtist.ArtistID != 21)
             {
                 OK = false;
             }
@@ -517,10 +517,10 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistNo = 21;
+            Int32 ArtistID = 21;
             //invoke the method
-            Found = AnArtist.Find(ArtistNo);
-            //check the ArtistNo
+            Found = AnArtist.Find(ArtistID);
+            //check the ArtistID
             if (AnArtist.ArtistName != "Drake")
             {
                 OK = false;
@@ -539,10 +539,10 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistNo = 21;
+            Int32 ArtistID = 21;
             //invoke the method
-            Found = AnArtist.Find(ArtistNo);
-            //check the ArtistNo
+            Found = AnArtist.Find(ArtistID);
+            //check the ArtistID
             if (AnArtist.ArtistGenre != "Rap")
             {
                 OK = false;
@@ -561,10 +561,10 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistNo = 21;
+            Int32 ArtistID = 21;
             //invoke the method
-            Found = AnArtist.Find(ArtistNo);
-            //check the ArtistNo
+            Found = AnArtist.Find(ArtistID);
+            //check the ArtistID
             if (AnArtist.ArtistBio != "Rapper")
             {
                 OK = false;

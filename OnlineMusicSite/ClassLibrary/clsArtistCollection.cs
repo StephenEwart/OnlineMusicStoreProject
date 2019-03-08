@@ -56,7 +56,7 @@ namespace ClassLibrary
                 //get the artist name
                 AnArtist.Artist = DB.DataTable.Rows[Index]["Artist"].ToString();
                 //get the primary key
-                AnArtist.ArtistNo = Convert.ToInt32(DB.DataTable.Rows[Index]["ArtistNo"]);
+                AnArtist.ArtistID = Convert.ToInt32(DB.DataTable.Rows[Index]["ArtistID"]);
                 //add the artist to the private data member
                 mAllArtists.Add(AnArtist);
                 //increment the index

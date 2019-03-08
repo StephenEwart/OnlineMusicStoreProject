@@ -40,7 +40,7 @@ namespace TestLibrary
             //create the item of test data
             clsArtist TestItem = new clsArtist();
             //set its properties
-            TestItem.ArtistNo = 4;
+            TestItem.ArtistID = 4;
             TestItem.Artist = "Dave";
             //add the item to the test list
             TestList.Add(TestItem);
