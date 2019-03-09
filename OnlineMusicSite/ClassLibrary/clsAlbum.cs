@@ -6,6 +6,7 @@ namespace ClassLibrary
     {
         public string Album { get; set; }
         public int AlbumNo { get; set; }
+        public int AlbumID { get; set; }
 
         public string Valid(string someAlbum)
         {
