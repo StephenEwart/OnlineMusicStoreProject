@@ -79,13 +79,13 @@ namespace ClassLibrary
             //while (Index < RecordCount)
             //{
             //    //create a new instance of the album class
-            //    clsAlbum AAlbum = new clsAlbum();
+            //    clsAlbum AnAlbum = new clsAlbum();
             //    //get the album name 
-            //    AAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
+            //    AnAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
             //    //get the primary key
-            //    AAlbum.AlbumNo = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
+            //    AnAlbum.AlbumID = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
             //    //add the county to the private data member
-            //    mAllAlbums.Add(AAlbum);
+            //    mAllAlbums.Add(AnAlbum);
             //    //increment the index 
             //    Index++;
             //}

@@ -27,18 +27,6 @@ namespace TestLibrary
             Assert.AreEqual(AnAlbum.Album, SomeAlbum);
         }
 
-        //[TestMethod]
-        //public void ArtistIDOK()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create some test data to assign to the property
-        //    string SomeAlbum = "1234";
-        //    AnAlbum.Album = SomeAlbum;
-        //    //test to see the 2 value are the same 
-        //    Assert.AreEqual(AnAlbum.Album, SomeAlbum);
-        //}
-
         [TestMethod]
         public void AlbumPriceOK()
         {
@@ -75,7 +63,6 @@ namespace TestLibrary
             //test to see the 2 value are the same 
             Assert.AreEqual(AnAlbum.AlbumID, AlbumID);
         }
-      
 
         [TestMethod]
         public void ValidMethodOK()
@@ -106,21 +93,6 @@ namespace TestLibrary
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
-
-        //[TestMethod]
-        //public void ArtistIDMinLessOne()
-        //{
-        //    create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    create some test data to test the meothod 
-        //    string SomeAlbum = "";
-        //    invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    test to see that the result is ok there was no error msg returned 
-        //    Assert.AreNotEqual(Error, "");
-        //}
 
         [TestMethod]
         public void AlbumPriceMinLessOne()
@@ -165,20 +137,6 @@ namespace TestLibrary
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
-        //[TestMethod]
-        //public void ArtistIDMinBoundry()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    //create some test data to test the meothod 
-        //    string SomeAlbum = "a";
-        //    //invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    //test to see that the result is ok there was no error msg returned 
-        //    Assert.AreEqual(Error, "");
-        //}
 
         [TestMethod]
         public void AlbumPriceMinBoundry()
@@ -224,20 +182,6 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
 
-        //[TestMethod]
-        //public void ArtistIDMinPlusOne()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    //create some test data to test the meothod 
-        //    string SomeAlbum = "aa";
-        //    //invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    //test to see that the result is ok there was no error msg returned 
-        //    Assert.AreEqual(Error, "");
-        //}
         [TestMethod]
         public void AlbumPriceMinPlusOne()
         {
@@ -281,20 +225,6 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
 
-        //[TestMethod]
-        //public void ArtistIDMaxLessOne()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    //create some test data to test the meothod 
-        //    string SomeAlbum = "0123456789012345678901234567890123456789012345678";
-        //    //invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    //test to see that the result is ok there was no error msg returned 
-        //    Assert.AreEqual(Error, "");
-        //}
         [TestMethod]
         public void AlbumPriceMaxLessOne()
         {
@@ -339,20 +269,6 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
 
-    //    [TestMethod]
-    //    public void ArtistIDMaxBoundry()
-    //    {
-    //        create an instance of the class we want to create
-    //        clsAlbum AnAlbum = new clsAlbum();
-    //    create a string variable to store the results of the validation
-    //        string Error = "";
-    //    create some test data to test the meothod
-    //        string SomeAlbum = "01234567890123456789012345678901234567890123456789";
-    //    invoke the mothod
-    //    Error = AnAlbum.Valid(SomeAlbum);
-    //    test to see that the result is ok there was no error msg returned
-    //    Assert.AreEqual(Error, "");
-    //}
     [TestMethod]
         public void AlbumPriceMaxBoundry()
         {
@@ -396,20 +312,6 @@ namespace TestLibrary
             Assert.AreNotEqual(Error, "");
         }
 
-        //[TestMethod]
-        //public void ArtistIDMaxPlusOne()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    //create some test data to test the meothod 
-        //    string SomeAlbum = "012345678901234567890123456789012345678901234567890";
-        //    //invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    //test to see that the result is ok there was no error msg returned 
-        //    Assert.AreNotEqual(Error, "");
-        //}
         [TestMethod]
         public void AlbumPriceMaxPlusOne()
         {
@@ -453,20 +355,6 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
 
-        //[TestMethod]
-        //public void ArtistIDMid()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    //create some test data to test the meothod 
-        //    string SomeAlbum = "0123456789012345678901234";
-        //    //invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    //test to see that the result is ok there was no error msg returned 
-        //    Assert.AreEqual(Error, "");
-        //}
         [TestMethod]
         public void AlbumPriceMid()
         {
@@ -511,22 +399,7 @@ namespace TestLibrary
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
-        //[TestMethod]
-        //public void ArtistIDExtremeMax()
-        //{
-        //    //create an instance of the class we want to create 
-        //    clsAlbum AnAlbum = new clsAlbum();
-        //    //create a string variable to store the results of the validation 
-        //    string Error = "";
-        //    //create some test data to test the meothod 
-        //    string SomeAlbum = "";
-        //    //pad the string with characters 
-        //    SomeAlbum = SomeAlbum.PadRight(500, 'a');
-        //    //invoke the mothod
-        //    Error = AnAlbum.Valid(SomeAlbum);
-        //    //test to see that the result is ok there was no error msg returned 
-        //    Assert.AreNotEqual(Error, "");
-        //}
+
         [TestMethod]
         public void AlbumPriceExtremeMax()
         {
