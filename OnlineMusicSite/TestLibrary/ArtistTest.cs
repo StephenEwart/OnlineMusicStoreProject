@@ -23,11 +23,11 @@ namespace TestLibrary
             //create an instance of clsArtist
             clsArtist AnArtist = new clsArtist();
             //test data to assign to property
-            string SomeArtist = "Drake";
+            string ArtistName = "Drake";
             //test data assigned to property
-            AnArtist.Artist = SomeArtist;
+            AnArtist.Artist = ArtistName;
             //a test to see the two values are the same
-            Assert.AreEqual(AnArtist.Artist, SomeArtist);
+            Assert.AreEqual(AnArtist.Artist, ArtistName);
         }
 
         [TestMethod]
@@ -37,11 +37,11 @@ namespace TestLibrary
             //create an instance of clsArtist
             clsArtist AnArtist = new clsArtist();
             //test data to assign to property
-            string SomeArtist = "Rap";
+            string ArtistGenre = "Rap";
             //test data assigned to property
-            AnArtist.Artist = SomeArtist;
+            AnArtist.Artist = ArtistGenre;
             //a test to see the two values are the same
-            Assert.AreEqual(AnArtist.Artist, SomeArtist);
+            Assert.AreEqual(AnArtist.Artist, ArtistGenre);
         }
 
         [TestMethod]
@@ -51,11 +51,11 @@ namespace TestLibrary
             //create an instance of clsArtist
             clsArtist AnArtist = new clsArtist();
             //test data to assign to property
-            string SomeArtist = "Rapper";
+            string ArtistBio = "Rapper";
             //test data assigned to property
-            AnArtist.Artist = SomeArtist;
+            AnArtist.Artist = ArtistBio;
             //a test to see the two values are the same
-            Assert.AreEqual(AnArtist.Artist, SomeArtist);
+            Assert.AreEqual(AnArtist.Artist, ArtistBio);
         }
 
         [TestMethod]
@@ -81,9 +81,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "Drake";
+            string ArtistName = "Drake";
+            string ArtistGenre = "Rap";
+            string ArtistBio = "Canadian Rapper";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //a test to see the two values are the same
             Assert.AreEqual(Error, "");
         }
@@ -97,9 +99,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "";
+            string ArtistName = "";
+            string ArtistGenre = "Rap";
+            string ArtistBio = "Canadian Rapper";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //test to see that the result is NOT OK i.e there should be an error message
             Assert.AreNotEqual(Error, "");
         }
@@ -111,9 +115,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "";
+            string ArtistName = "Drake";
+            string ArtistGenre = "";
+            string ArtistBio = "Canadian Rapper";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //test to see that the result is NOT OK i.e there should be an error message
             Assert.AreNotEqual(Error, "");
         }
@@ -125,9 +131,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "";
+            string ArtistName = "Drake";
+            string ArtistGenre = "Rap";
+            string ArtistBio = "";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //test to see that the result is NOT OK i.e there should be an error message
             Assert.AreNotEqual(Error, "");
         }
@@ -141,9 +149,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "a";
+            string ArtistName = "a";
+            string ArtistGenre = "Rap";
+            string ArtistBio = "Canadian Rapper";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //a test to see the two values are the same
             Assert.AreEqual(Error, "");
         }
@@ -157,9 +167,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "a";
+            string ArtistName = "Drake";
+            string ArtistGenre = "a";
+            string ArtistBio = "Canadian Rapper";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //a test to see the two values are the same
             Assert.AreEqual(Error, "");
         }
@@ -173,9 +185,11 @@ namespace TestLibrary
             //create a string variable to store the result of the validation
             string Error = "";
             //test data assigned to property
-            string SomeArtist = "a";
+            string ArtistName = "Drake";
+            string ArtistGenre = "Rap";
+            string ArtistBio = "a";
             //invoke the method
-            Error = AnArtist.Valid(SomeArtist);
+            Error = AnArtist.Valid(ArtistName, ArtistGenre, ArtistBio);
             //a test to see the two values are the same
             Assert.AreEqual(Error, "");
         }

@@ -77,17 +77,44 @@ namespace ClassLibrary
             }
         }
 
-        public string Valid(string someArtist)
+        public string Valid(string ArtistName, string ArtistGenre, string ArtistBio)
         {
             string Error = "";
-            if (someArtist.Length > 50)
+            
+            //if the Artist Name is blank
+            if (ArtistName.Length == 0)
             {
-                Error = "The Artist Name cannot be more then 50 characters";
+                //record the error
+                Error = Error + "The Artist Name may not be blank : ";
             }
-            if (someArtist.Length == 0)
+            //if the Artist Name is more than 50 characters
+            if (ArtistName.Length > 50)
             {
-                Error = "The Artist Name may not be blank";
+                Error = Error + "The Artist Name may not be more than 6 characters : ";
             }
+            //if the Artist Genre is blank
+            if (ArtistGenre.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Artist Genre may not be blank : ";
+            }
+            //if the Artist Genre is more than 50 characters
+            if (ArtistGenre.Length > 50)
+            {
+                Error = Error + "The Artist Genre may not be more than 6 characters : ";
+            }
+            //if the Artist Bio is blank
+            if (ArtistBio.Length == 0)
+            {
+                //record the error
+                Error = Error + "The Artist Bio may not be blank : ";
+            }
+            //if the Artist Bio is more than 50 characters
+            if (ArtistBio.Length > 50)
+            {
+                Error = Error + "The Artist Bio may not be more than 6 characters : ";
+            }
+            //return any error messages
             return Error;
         }
 
