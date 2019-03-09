@@ -60,12 +60,17 @@ namespace ClassLibrary
             AAlbum.Album = "KamiKaze";
             //add the second album to the private list 
             mAllAlbums.Add(AAlbum);
+            AAlbum = new clsAlbum();
+            //set the album to the private list of albums 
+            AAlbum.Album = "Tomorrow";
+            //add the second album to the private list 
+            mAllAlbums.Add(AAlbum);
             //the private list now contains 2 albums
 
             ////create an instance of the dataconnection
             //clsDataConnection DB = new clsDataConnection();
             ////execute the stored procedure to get the list of data
-            //DB.Execute("sproc_tblAlbum_selectAll");
+            //DB.Execute("sproc_tblAlbum_SelectAll");
             ////get the count of records 
             //Int32 RecordCount = DB.Count;
             ////set up the index for the loop
@@ -78,7 +83,7 @@ namespace ClassLibrary
             //    //get the album name 
             //    AAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
             //    //get the primary key
-            //    AAlbum.AlbumNo = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumNo"]);
+            //    AAlbum.AlbumNo = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
             //    //add the county to the private data member
             //    mAllAlbums.Add(AAlbum);
             //    //increment the index 
