@@ -30,10 +30,10 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void AllArtistsOK()
+        public void ListAndCountOK()
         {
             //create an instance of clsArtistCollection
-            clsArtistCollection Artists = new clsArtistCollection();
+            clsArtistCollection AllArtists = new clsArtistCollection();
             //create some test data to asssign to the property
             //data is list of objects
             List<clsArtist> TestList = new List<clsArtist>();
@@ -45,19 +45,12 @@ namespace TestLibrary
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data to the property
-            Artists.AllArtists = TestList;
+            AllArtists.ArtistList = TestList;
             //test to see that the two values are the same
-            Assert.AreEqual(Artists.AllArtists, TestList);
+            Assert.AreEqual(AllArtists.Count, TestList.Count);
         }
         
-        [TestMethod]
-        public void TwoArtistsPresent()
-        {
-            //create an instance of clsartistcollection
-            clsArtistCollection Artists = new clsArtistCollection();
-            //test to see that the two values are the same
-            Assert.AreEqual(Artists.Count, 3);
-        }
+       
         
     }
 }
