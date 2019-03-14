@@ -117,7 +117,7 @@ namespace MusicSiteBackEnd
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //create object based on frmAddCustomer
-            frmAddCustomer addCustomer = new frmAddCustomer();
+            frmAddCustomer addCustomer = new frmAddCustomer(0);
             //make the object a child of mdi parent
             addCustomer.MdiParent = this;
             //make the form visible

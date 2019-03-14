@@ -8,14 +8,6 @@ namespace TestLibrary
     [TestClass]
     public class CustomerCollectionTest
     {
-        /*
-        [TestMethod]
-        public void DataConnectExists()
-        {
-            clsCustomerCollection customer = new clsCustomerCollection();
-            Assert.IsNotNull(customer.dataConnect);
-        }
-        */
 
         [TestMethod]
         public void CustomerCollectionExist()
@@ -29,8 +21,8 @@ namespace TestLibrary
         {
             clsCustomerCollection customer = new clsCustomerCollection();
             clsCustomer newCustomer = new clsCustomer();
-            customer.mThisCustomer = newCustomer;
-            Assert.AreEqual(customer.mThisCustomer, newCustomer);
+            customer.ThisCustomer = newCustomer;
+            Assert.AreEqual(customer.ThisCustomer, newCustomer);
         }
 
         [TestMethod]
@@ -66,13 +58,13 @@ namespace TestLibrary
         }
         
         [TestMethod]
-        public void ListAndCountWork()
+        public void AddWorks()
         {
             clsCustomerCollection allCustomers = new clsCustomerCollection();
-            List<clsCustomer> testList = new List<clsCustomer>();
             clsCustomer testItem = new clsCustomer();
 
-            testItem.mCustomerId = 1;
+            int PK = 0;
+
             testItem.mCustomerName = "Calum";
             testItem.mUsername = "SCREwart";
             testItem.mEmail = "screwart127@gmail.com";
@@ -81,12 +73,13 @@ namespace TestLibrary
             testItem.mCardDetails = "3489345/356842328928";
             testItem.mAddress = "10 albion street";
 
-            testList.Add(testItem);
+            PK = allCustomers.Add();
 
-            allCustomers.customerList = testList;
+            testItem.mCustomerId = PK;
 
-            Assert.AreEqual(allCustomers.Count, testList.Count);
-        } 
-        
+            allCustomers.ThisCustomer.Find(PK);
+
+            Assert.AreEqual(allCustomers.ThisCustomer, testItem);
+        }         
     }
 }
