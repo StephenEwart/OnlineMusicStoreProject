@@ -56,7 +56,7 @@ namespace TestLibrary
             //create an instance of clsartistcollection
             clsArtistCollection Artists = new clsArtistCollection();
             //test to see that the two values are the same
-            Assert.AreEqual(Artists.Count, 2);
+            Assert.AreEqual(Artists.Count, 3);
         }
         
     }

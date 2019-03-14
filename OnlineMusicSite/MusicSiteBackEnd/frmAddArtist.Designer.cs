@@ -132,6 +132,7 @@
             this.Controls.Add(this.lblArtistName);
             this.Name = "frmAddArtist";
             this.Text = "frmAddArtist";
+            this.Load += new System.EventHandler(this.frmAddArtist_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
