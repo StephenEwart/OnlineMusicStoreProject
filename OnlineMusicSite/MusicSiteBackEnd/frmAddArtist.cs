@@ -40,5 +40,10 @@ namespace MusicSiteBackEnd
             AddArtist();
             lblError.Text = " Add Complete";
         }
+
+        private void frmAddArtist_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

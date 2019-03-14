@@ -54,7 +54,7 @@ namespace ClassLibrary
                 //create a new instance of the artist class
                 clsArtist AnArtist = new clsArtist();
                 //get the artist name
-                AnArtist.Artist = DB.DataTable.Rows[Index]["Artist"].ToString();
+                AnArtist.Artist = DB.DataTable.Rows[Index]["ArtistName"].ToString();
                 //get the primary key
                 AnArtist.ArtistID = Convert.ToInt32(DB.DataTable.Rows[Index]["ArtistID"]);
                 //add the artist to the private data member

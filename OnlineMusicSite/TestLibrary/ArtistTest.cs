@@ -545,11 +545,11 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistID = 21;
+            Int32 ArtistID = 1;
             //invoke the method
             Found = AnArtist.Find(ArtistID);
             //check the ArtistID
-            if (AnArtist.ArtistID != 21)
+            if (AnArtist.ArtistID != 1)
             {
                 OK = false;
             }
@@ -567,7 +567,7 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistID = 21;
+            Int32 ArtistID = 1;
             //invoke the method
             Found = AnArtist.Find(ArtistID);
             //check the ArtistID
@@ -589,7 +589,7 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistID = 21;
+            Int32 ArtistID = 1;
             //invoke the method
             Found = AnArtist.Find(ArtistID);
             //check the ArtistID
@@ -611,11 +611,11 @@ namespace TestLibrary
             //boolean variable to record if data is OK 
             Boolean OK = true;
             //create some test data to use with the method
-            Int32 ArtistID = 21;
+            Int32 ArtistID = 1;
             //invoke the method
             Found = AnArtist.Find(ArtistID);
             //check the ArtistID
-            if (AnArtist.ArtistBio != "Rapper")
+            if (AnArtist.ArtistBio != "Rapper from Canada")
             {
                 OK = false;
             }
