@@ -54,6 +54,7 @@
     <Compile Include="CustomerTest.cs" />
     <Compile Include="SongTest.cs" />
     <Compile Include="CustomerCollectionTest.cs" />
+    <Compile Include="tstAlbum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
