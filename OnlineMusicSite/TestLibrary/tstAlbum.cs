@@ -84,7 +84,7 @@ namespace TestLibrary
         }
 
         [TestMethod]
-        public void TestAddressNoFound()
+        public void TestAlbumIDFound()
         {
             //create an instnace of the class we want to create 
             clsAlbum AnAlbum = new clsAlbum();
@@ -104,5 +104,7 @@ namespace TestLibrary
             //test to see that the result is correct
             Assert.IsTrue(OK);            
         }
+
+
     }
 }
