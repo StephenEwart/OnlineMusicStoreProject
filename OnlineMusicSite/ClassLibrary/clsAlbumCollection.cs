@@ -48,47 +48,47 @@ namespace ClassLibrary
         //public constructor for the class 
         public clsAlbumCollection()
         {
-            //create an instance of the album class to store a album
-            clsAlbum AAlbum = new clsAlbum();
-            //set the album to 
-            AAlbum.Album = "Tha Carter V";
-            //add the album to the private list of alnums
-            mAllAlbums.Add(AAlbum);
-            //re initialise the aalbum object to accept a new item
-            AAlbum = new clsAlbum();
-            //set the album to the private list of albums 
-            AAlbum.Album = "KamiKaze";
-            //add the second album to the private list 
-            mAllAlbums.Add(AAlbum);
-            AAlbum = new clsAlbum();
-            //set the album to the private list of albums 
-            AAlbum.Album = "Tomorrow";
-            //add the second album to the private list 
-            mAllAlbums.Add(AAlbum);
-            //the private list now contains 2 albums
+            ////create an instance of the album class to store a album
+            //clsAlbum AAlbum = new clsAlbum();
+            ////set the album to 
+            //AAlbum.Album = "Tha Carter V";
+            ////add the album to the private list of alnums
+            //mAllAlbums.Add(AAlbum);
+            ////re initialise the aalbum object to accept a new item
+            //AAlbum = new clsAlbum();
+            ////set the album to the private list of albums 
+            //AAlbum.Album = "KamiKaze";
+            ////add the second album to the private list 
+            //mAllAlbums.Add(AAlbum);
+            //AAlbum = new clsAlbum();
+            ////set the album to the private list of albums 
+            //AAlbum.Album = "Tomorrow";
+            ////add the second album to the private list 
+            //mAllAlbums.Add(AAlbum);
+            ////the private list now contains 2 albums
 
-            ////create an instance of the dataconnection
-            //clsDataConnection DB = new clsDataConnection();
-            ////execute the stored procedure to get the list of data
-            //DB.Execute("sproc_tblAlbum_SelectAll");
-            ////get the count of records 
-            //Int32 RecordCount = DB.Count;
-            ////set up the index for the loop
-            //Int32 Index = 0;
-            ////while there are records to process
-            //while (Index < RecordCount)
-            //{
-            //    //create a new instance of the album class
-            //    clsAlbum AnAlbum = new clsAlbum();
-            //    //get the album name 
-            //    AnAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
-            //    //get the primary key
-            //    AnAlbum.AlbumID = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
-            //    //add the county to the private data member
-            //    mAllAlbums.Add(AnAlbum);
-            //    //increment the index 
-            //    Index++;
-            //}
+            //create an instance of the dataconnection
+            clsDataConnection DB = new clsDataConnection();
+            //execute the stored procedure to get the list of data
+            DB.Execute("sproc_tblAlbum_SelectAll");
+            //get the count of records 
+            Int32 RecordCount = DB.Count;
+            //set up the index for the loop
+            Int32 Index = 0;
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a new instance of the album class
+                clsAlbum AllAlbum = new clsAlbum();
+                //get the album name 
+                AllAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
+                //get the primary key
+                AllAlbum.AlbumID = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
+                //add the county to the private data member
+                mAllAlbums.Add(AllAlbum);
+                //increment the index 
+                Index++;
+            }
 
         }
 
