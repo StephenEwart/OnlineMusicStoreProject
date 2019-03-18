@@ -28,11 +28,24 @@ namespace MusicSiteBackEnd
         {
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
+
+            DisplayCustomers();
+        }
+
+        void DisplayCustomers()
+        {
+            //create instance of customer collection
+            clsCustomerCollection customers = new clsCustomerCollection();
+
+            lstCustomers.DataSource = customers.customerList;
+            lstCustomers.ValueMember = "CustomerId";
+            lstCustomers.DisplayMember = "CustomerName";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            frmAddCustomer addCustomer = new frmAddCustomer(lstCustomers.SelectedIndex);
+            addCustomer.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -47,12 +60,17 @@ namespace MusicSiteBackEnd
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

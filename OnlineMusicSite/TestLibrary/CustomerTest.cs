@@ -50,7 +50,7 @@ namespace TestLibrary
         [TestMethod]
         public void mPasswordExists()
         {
-            string password = "password";   string confirmPassword = "password";
+            string password = "password";
             clsCustomer customer = new clsCustomer();
             customer.mPassword = password;
             Assert.AreEqual(customer.mPassword,  password);
@@ -110,7 +110,7 @@ namespace TestLibrary
             string result = customer.InputValidation(customerName, userName, email, password, confirmPassword,  phoneNo, cardDetails, address);
             Assert.AreEqual(Error, result);
         }
-        /*
+        
         [TestMethod]
         public void FindExists()
         {
@@ -120,7 +120,7 @@ namespace TestLibrary
             found = customer.Find(customerNo);
             Assert.IsTrue(found);
         }
-        */
+        
 
 
         /////////////////////////////////////// Boundary Testing ////////////////////////////////////

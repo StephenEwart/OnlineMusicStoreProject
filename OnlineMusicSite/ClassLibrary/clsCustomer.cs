@@ -106,27 +106,8 @@ namespace ClassLibrary
                 errors = errors + 1;
             }
 
+            return errorOutput;
 
-            //if the customers name is longer then  
-
-            /*
-            note to self, add code on user interface that tells user what exactly the errors were
-            
-            should look like this
-
-            MessageBox.Show("There were ")
-
-            */
-
-            if (errors == 0)
-            {
-                return "";
-            }
-            else
-            {
-                return string.Format("{0}|{1}", errors, errorOutput);
-                //do a for loop to check if multiple digits exist
-            }
         }
 
         public Boolean Find(int customerId)
@@ -136,7 +117,7 @@ namespace ClassLibrary
             //add customerId as parameter
             dataConnect.AddParameter("@CustomerId", customerId);
             //execute
-            dataConnect.Execute("sproc_tblCustomer_Find");
+            dataConnect.Execute("sproc_tblCustomer_FindCustomer");
 
             if (dataConnect.Count == 1)
             {

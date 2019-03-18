@@ -10,8 +10,20 @@ namespace ClassLibrary
     {
         public clsDataConnection dataConnect;
 
-        public clsCustomer mThisCustomer { get; set; }
+        private clsCustomer mThisCustomer;
         private List<clsCustomer> mAllCustomers;
+
+        public clsCustomer ThisCustomer
+        {
+            get
+            {
+                return mThisCustomer;
+            }
+            set
+            {
+                mThisCustomer = value;
+            }
+        }
 
         public bool Delete(int customerId)
         {
@@ -23,6 +35,10 @@ namespace ClassLibrary
             get
             {
                 return mAllCustomers.Count;
+            }
+            set
+            {
+
             }
         }
         
@@ -40,25 +56,33 @@ namespace ClassLibrary
         
         public int Add()
         {
-            /*
             clsDataConnection dataConnect = new clsDataConnection();
+            
+            dataConnect.AddParameter("@customerName", mThisCustomer.mCustomerName);
+            dataConnect.AddParameter("@username", mThisCustomer.mUsername);
+            dataConnect.AddParameter("@email", mThisCustomer.mEmail);
+            dataConnect.AddParameter("@password", mThisCustomer.mPassword);
+            dataConnect.AddParameter("@phoneNo", mThisCustomer.mPhoneNo);
+            dataConnect.AddParameter("@cardDetails", mThisCustomer.mCardDetails);
+            dataConnect.AddParameter("@address", mThisCustomer.mAddress);
 
-            dataConnect.AddParameter("", );
-            dataConnect.AddParameter("",);
-            dataConnect.AddParameter("",);
-            dataConnect.AddParameter("",);
-            dataConnect.AddParameter("",);
-            dataConnect.AddParameter("",);
-            dataConnect.AddParameter("",);
-            dataConnect.AddParameter("",);
-            return true
-            */
-            return 1;
+            return dataConnect.Execute("sproc_tblCustomer_AddCustomer");
+
         }
 
         public void Update()
         {
+            clsDataConnection dataConnect = new clsDataConnection();
 
+            dataConnect.AddParameter("@customerId", mThisCustomer.mCustomerId);
+            dataConnect.AddParameter("@customerName", mThisCustomer.mCustomerName);
+            dataConnect.AddParameter("@username", mThisCustomer.mUsername);
+            dataConnect.AddParameter("@email", mThisCustomer.mEmail);
+            dataConnect.AddParameter("@phoneNo", mThisCustomer.mPhoneNo);
+            dataConnect.AddParameter("@cardDetails", mThisCustomer.mCardDetails);
+            dataConnect.AddParameter("@address", mThisCustomer.mAddress);
+
+            dataConnect.Execute("sproc_tblCustomer_UpdateCustomer");
         }
 
     }
