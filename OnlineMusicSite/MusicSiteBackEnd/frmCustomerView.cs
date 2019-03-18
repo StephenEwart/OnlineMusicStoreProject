@@ -44,7 +44,8 @@ namespace MusicSiteBackEnd
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            frmAddCustomer addCustomer = new frmAddCustomer(lstCustomers.SelectedIndex);
+            addCustomer.Show();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -59,7 +60,7 @@ namespace MusicSiteBackEnd
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
