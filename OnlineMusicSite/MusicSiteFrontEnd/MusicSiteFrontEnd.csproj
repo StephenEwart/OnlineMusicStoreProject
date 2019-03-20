@@ -67,7 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ArtistPage.aspx" />
+    <Content Include="Artist.aspx" />
     <Content Include="Customer.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -76,12 +76,12 @@
     <Content Include="CustomerAdd.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtistPage.aspx.cs">
-      <DependentUpon>ArtistPage.aspx</DependentUpon>
+    <Compile Include="Artist.aspx.cs">
+      <DependentUpon>Artist.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ArtistPage.aspx.designer.cs">
-      <DependentUpon>ArtistPage.aspx</DependentUpon>
+    <Compile Include="Artist.aspx.designer.cs">
+      <DependentUpon>Artist.aspx</DependentUpon>
     </Compile>
     <Compile Include="Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
