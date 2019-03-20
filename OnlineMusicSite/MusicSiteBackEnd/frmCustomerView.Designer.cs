@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblError = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnDisplayAll = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstCustomers
@@ -122,11 +123,22 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnDisplayAll
+            // 
+            this.btnDisplayAll.Location = new System.Drawing.Point(445, 332);
+            this.btnDisplayAll.Name = "btnDisplayAll";
+            this.btnDisplayAll.Size = new System.Drawing.Size(75, 23);
+            this.btnDisplayAll.TabIndex = 9;
+            this.btnDisplayAll.Text = "button1";
+            this.btnDisplayAll.UseVisualStyleBackColor = true;
+            this.btnDisplayAll.Click += new System.EventHandler(this.btnDisplayAll_Click);
+            // 
             // frmCustomerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 426);
+            this.Controls.Add(this.btnDisplayAll);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.label1);
@@ -155,5 +167,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnDisplayAll;
     }
 }
