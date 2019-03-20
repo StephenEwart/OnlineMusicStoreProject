@@ -16,18 +16,20 @@ namespace TestLibrary
             Assert.IsNotNull(AnAlbum);
         }
 
-        [TestMethod]
-        public void ActivePropertyOK()
-        {
-            //create an instnace of the class we want to create 
-            clsAlbum AnAlbum = new clsAlbum();
-            //create some test data to assign to the property 
-            Boolean TestData = true;
-            //assign the data to the property
-            AnAlbum.Active = TestData;
-            //test to see that the two value are the same
-            Assert.AreEqual(AnAlbum.Active, TestData);
-        }
+
+
+        //[TestMethod]
+        //public void ActivePropertyOK()
+        //{
+        //    //create an instnace of the class we want to create 
+        //    clsAlbum AnAlbum = new clsAlbum();
+        //    //create some test data to assign to the property 
+        //    Boolean TestData = true;
+        //    //assign the data to the property
+        //    AnAlbum.Active = TestData;
+        //    //test to see that the two value are the same
+        //    Assert.AreEqual(AnAlbum.Active, TestData);
+        //}
 
         [TestMethod]
         public void AlbumIDPropertyOK()
