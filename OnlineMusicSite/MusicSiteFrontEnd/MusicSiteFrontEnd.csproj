@@ -68,10 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ArtistPage.aspx" />
+    <Content Include="Customer.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
+    <Content Include="CustomerAdd.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArtistPage.aspx.cs">
@@ -80,6 +82,13 @@
     </Compile>
     <Compile Include="ArtistPage.aspx.designer.cs">
       <DependentUpon>ArtistPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.aspx.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer.aspx.designer.cs">
+      <DependentUpon>Customer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -99,6 +108,13 @@
       <DependentUpon>MusicSite.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomerAdd.aspx.cs">
+      <DependentUpon>CustomerAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerAdd.aspx.designer.cs">
+      <DependentUpon>CustomerAdd.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="MusicSite.Master" />
