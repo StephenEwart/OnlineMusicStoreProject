@@ -21,7 +21,7 @@ namespace MusicSiteFrontEnd
         void DisplayCustomers()
         {
             clsCustomerCollection customer = new clsCustomerCollection();
-            lstCustomers.DataSource = customer.customerList;
+            lstCustomers.DataSource = customer.CustomerList;
             lstCustomers.DataValueField = "CustomerId";
             lstCustomers.DataTextField = "CustomerName";
             lstCustomers.DataBind();
