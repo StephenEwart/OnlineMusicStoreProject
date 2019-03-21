@@ -9,8 +9,6 @@ namespace ClassLibrary
     public class clsSong
     {
         public string Song { get; set; }
-<<<<<<< HEAD
-=======
 
         public string Valid(string SongName, string SongArtist, string SongAlbum, string SongGenre)
         {
@@ -49,6 +47,7 @@ namespace ClassLibrary
             throw new NotImplementedException();
         }
 
+        /*
         public bool Find(int songID)
         {
             //create an instance of the data connection
@@ -76,6 +75,7 @@ namespace ClassLibrary
                 return false;
             }
         }
+        */
 
         public string Valid(string songName, string songArtist, string songAlbum, object songGenre)
         {
@@ -96,6 +96,5 @@ namespace ClassLibrary
         {
             throw new NotImplementedException();
         }
->>>>>>> parent of e43c839... Merge pull request #20 from StephenEwart/todays_work
     }
 }
