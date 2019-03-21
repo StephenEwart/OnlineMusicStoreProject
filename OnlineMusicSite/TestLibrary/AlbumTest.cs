@@ -81,7 +81,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             //string AlbumName = "Lil Wayne";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -96,7 +96,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -111,7 +111,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -126,7 +126,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -140,7 +140,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "a";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -155,7 +155,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "a";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -169,7 +169,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "a";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -184,7 +184,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "aa";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -199,7 +199,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "aa";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -213,7 +213,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "aa";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -227,7 +227,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "0123456789012345678901234567890123456789012345678";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -242,7 +242,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "0123456789012345678901234567890123456789012345678";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -256,7 +256,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "0123456789012345678901234567890123456789012345678";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -271,7 +271,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "01234567890123456789012345678901234567890123456789";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -286,7 +286,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "01234567890123456789012345678901234567890123456789";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -300,7 +300,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "01234567890123456789012345678901234567890123456789";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -314,7 +314,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "012345678901234567890123456789012345678901234567890";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -329,7 +329,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "012345678901234567890123456789012345678901234567890";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -343,7 +343,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "012345678901234567890123456789012345678901234567890";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -357,7 +357,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "0123456789012345678901234";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -372,7 +372,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "0123456789012345678901234";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -386,7 +386,7 @@ namespace TestLibrary
             //create some test data to test the meothod 
             string AlbumName = "0123456789012345678901234";
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreEqual(Error, "");
         }
@@ -402,7 +402,7 @@ namespace TestLibrary
             //pad the string with characters 
             AlbumName = AlbumName.PadRight(500, 'a');
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -419,7 +419,7 @@ namespace TestLibrary
             //pad the string with characters 
             AlbumName = AlbumName.PadRight(500, 'a');
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
@@ -435,7 +435,7 @@ namespace TestLibrary
             //pad the string with characters 
             AlbumName = AlbumName.PadRight(500, 'a');
             //invoke the mothod
-            Error = AnAlbum.Valid(AlbumName);
+            Error = AnAlbum.Valid(AlbumName, PriceID);
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }

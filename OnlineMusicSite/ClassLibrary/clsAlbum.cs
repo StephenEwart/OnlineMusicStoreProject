@@ -21,10 +21,11 @@ namespace ClassLibrary
 
         //public int AlbumID { get; set; }
 
-        public string Valid( string AlbumName)
+        public string Valid( string AlbumName, string PriceID)
         {
             //string variable to store the error msg
             string Error = "";
+           
             //if the name of the album is more than 50 characters 
             if (AlbumName.Length > 50)
             {
@@ -38,6 +39,7 @@ namespace ClassLibrary
             }
             return Error;
         }
+        
         //get the property for albumid
         public int AlbumID
         {
