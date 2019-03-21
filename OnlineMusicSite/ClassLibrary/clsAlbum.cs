@@ -21,7 +21,7 @@ namespace ClassLibrary
 
         //public int AlbumID { get; set; }
 
-        public string Valid(string AlbumName)
+        public string Valid( string AlbumName)
         {
             //string variable to store the error msg
             string Error = "";
