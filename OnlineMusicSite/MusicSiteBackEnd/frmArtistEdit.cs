@@ -7,23 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ClassLibrary;
 
 namespace MusicSiteBackEnd
 {
-    public partial class frmAddArtist : Form
+    public partial class frmArtistEdit : Form
     {
-        public frmAddArtist()
+        public frmArtistEdit()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        public void AddArtist()
+
+        public void EditArtist()
         {
             //instance of data connection class
             clsDataConnection dataConnect = new clsDataConnection();
@@ -32,21 +28,25 @@ namespace MusicSiteBackEnd
             dataConnect.AddParameter("@ArtistGenre", txtGenre.Text);
             dataConnect.AddParameter("@ArtistBio", txtBio.Text);
             //execute stored procedure
-            dataConnect.Execute("sproc_tblArtist_Insert");
+            dataConnect.Execute("sproc_tblArtist_Update");
         }
 
-       
-
-        private void frmAddArtist_Load(object sender, EventArgs e)
+        private void frmArtistEdit_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
+        private void btnOK_Click(object sender, EventArgs e)
         {
-            //call addartist function
-            AddArtist();
-            lblError.Text = " Add Complete";
+            //call edit artist function
+            EditArtist();
+            lblError.Text = " Edit Complete";
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            //closes form
+            this.Close();
         }
     }
 }
