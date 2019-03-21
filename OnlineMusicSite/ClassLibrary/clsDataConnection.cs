@@ -20,6 +20,12 @@ public class clsDataConnection
     SqlCommandBuilder commandBuilder = new SqlCommandBuilder();
     //stores a list of all of the sql parameters
     List<SqlParameter> SQLParams = new List<SqlParameter>();
+
+    public void AddParameter(string v)
+    {
+        throw new NotImplementedException();
+    }
+
     //data table used to store the results of the stored procedure
     DataTable dataTable = new DataTable();
     //string variable used to store the connection string
@@ -45,7 +51,9 @@ public class clsDataConnection
         //connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"" + GetDBName() + "\";Integrated Security=True;Connect Timeout=30";
         connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"###\";Integrated Security=True;Connect Timeout=30";
         //                  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=H:\Desktop\PMNewest\OnlineMusicSite\App_Data\musicproject.mdf;Integrated Security=True;Connect Timeout=30
+
         SomePath = "C:\\Users\\rhysc\\Desktop\\PMMasterPage\\OnlineMusicSite\\App_Data\\musicproject.mdf";
+
         connectionString = connectionString.Replace("###", SomePath);
         return connectionString;
     }

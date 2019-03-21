@@ -79,6 +79,12 @@
     <Compile Include="frmArtistEdit.Designer.cs">
       <DependentUpon>frmArtistEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAddSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddSong.Designer.cs">
+      <DependentUpon>FrmAddSong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArtistView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     </Compile>
     <Compile Include="frmCustomerView.Designer.cs">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSongView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSongView.Designer.cs">
+      <DependentUpon>frmSongView.cs</DependentUpon>
     </Compile>
     <Compile Include="MDIBackEnd.cs">
       <SubType>Form</SubType>
@@ -108,11 +120,17 @@
     <EmbeddedResource Include="frmArtistEdit.resx">
       <DependentUpon>frmArtistEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddSong.resx">
+      <DependentUpon>FrmAddSong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArtistView.resx">
       <DependentUpon>frmArtistView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerView.resx">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSongView.resx">
+      <DependentUpon>frmSongView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIBackEnd.resx">
       <DependentUpon>MDIBackEnd.cs</DependentUpon>
