@@ -42,5 +42,19 @@ namespace MusicSiteFrontEnd
         {
             DisplayCustomers(txtSearch.Text);
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            int customerId;
+
+            if (lstCustomers.SelectedItem != null)
+            {
+                customerId = Convert.ToInt32(lstCustomers.SelectedValue);
+                //transfer to single customer view page
+                Session["customerId"] = customerId;
+                Response.Redirect("SingleCustomerView.aspx");
+            }
+
+        }
     }
 }
