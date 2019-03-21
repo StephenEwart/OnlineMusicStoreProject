@@ -29,14 +29,20 @@ namespace ClassLibrary
             //if the name of the album is more than 50 characters 
             if (AlbumName.Length > 50)
             {
-                //return an error msg
-                Error = "The album name cannot have more than 50 chararcters";
+                //record the error
+                Error = Error + "The album name cannot have more than 50 chararcters :";
             }
             if (AlbumName.Length == 0)
             {
-                //otherwise return an error msg
-                return "The album name may not be blank";
+                //record the error
+                Error = Error + "The album name may not be blank :";
             }
+            //price is not blank
+            if (PriceID.Length ==0)
+            {
+                Error = Error + "Price may not be blank:";
+            }
+            //return any error messages
             return Error;
         }
         
