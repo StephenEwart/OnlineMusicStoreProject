@@ -432,5 +432,22 @@ namespace TestLibrary
             //test to see that the result is ok there was no error msg returned 
             Assert.AreNotEqual(Error, "");
         }
+
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instnace of the class we want to create 
+            clsAlbum AnAlbum = new clsAlbum();
+            //bool variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 AlbumID = 1;
+            //invoke the method
+            Found = AnAlbum.Find(AlbumID);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+
     }
 }
