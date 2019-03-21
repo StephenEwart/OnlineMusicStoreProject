@@ -269,7 +269,7 @@ namespace TestLibrary
             Assert.AreEqual(Error, "");
         }
 
-    [TestMethod]
+        [TestMethod]
         public void AlbumPriceMaxBoundry()
         {
             //create an instance of the class we want to create 
@@ -448,6 +448,95 @@ namespace TestLibrary
             Assert.IsTrue(Found);
         }
 
+        [TestMethod]
+        public void TestAlbumIDFound()
+        {
+            //create an instnace of the class we want to create 
+            clsAlbum AnAlbum = new clsAlbum();
+            //bool variable to store the result of the validation
+            Boolean Found = false;
+            //bool variable to record if data is ok
+            Boolean OK = true;
+            //create  some test data to use the mothod 
+            Int32 AlbumID = 1;
+            //invoke the mothod
+            Found = AnAlbum.Find(AlbumID);
+            //check the album id
+            if (AnAlbum.AlbumID != 1)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestAlbumNameFound()
+        {
+            //create an instnace of the class we want to create 
+            clsAlbum AnAlbum = new clsAlbum();
+            //bool variable to store the result of the validation
+            Boolean Found = false;
+            //bool variable to record if data is ok
+            Boolean OK = true;
+            //create  some test data to use the mothod 
+            Int32 AlbumID = 1;
+            //invoke the mothod
+            Found = AnAlbum.Find(AlbumID);
+            //check the album id
+            if (AnAlbum.AlbumName != "Tha Carter V")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestReleaseDateFound()
+        {
+            //create an instnace of the class we want to create 
+            clsAlbum AnAlbum = new clsAlbum();
+            //bool variable to store the result of the validation
+            Boolean Found = false;
+            //bool variable to record if data is ok
+            Boolean OK = true;
+            //create  some test data to use the mothod 
+            Int32 AlbumID = 1;
+            //invoke the mothod
+            Found = AnAlbum.Find(AlbumID);
+            //check the album id
+            if (AnAlbum.ReleaseDate != Convert.ToDateTime("06/12/2018"))
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestPriceIDFound()
+        {
+            //create an instnace of the class we want to create 
+            clsAlbum AnAlbum = new clsAlbum();
+            //bool variable to store the result of the validation
+            Boolean Found = false;
+            //bool variable to record if data is ok
+            Boolean OK = true;
+            //create  some test data to use the mothod 
+            Int32 AlbumID = 1;
+            //invoke the mothod
+            Found = AnAlbum.Find(AlbumID);
+            //check the album id
+            if (AnAlbum.PriceID != 2)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+
 
     }
-}
+    }
