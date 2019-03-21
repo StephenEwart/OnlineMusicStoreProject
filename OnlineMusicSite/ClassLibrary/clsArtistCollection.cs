@@ -75,7 +75,7 @@ namespace ClassLibrary
             //connect to the database
             clsDataConnection DB = new clsDataConnection();
             //set the parameters for the stored procedure
-            DB.AddParameter("@ArtistName", mThisArtist.ArtistName);
+            DB.AddParameter("@ArtistID", mThisArtist.ArtistID);
             //execute the stored procedure
             DB.Execute("sproc_tblArtist_Delete");
         }
@@ -100,7 +100,7 @@ namespace ClassLibrary
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
             //send the ArtistName parameter to the database
-            //DB.AddParameter("@ArtistName", "");
+            //DB.AddParameter("@ArtistName", ArtistName);
             //execute the stored procedure to get the list of data
             DB.Execute("sproc_tblArtist_SelectAll");
             //populate the array list with the data table

@@ -72,7 +72,6 @@
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="SingleCustomerView.aspx" />
-    <Content Include="Song.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -115,13 +114,6 @@
     </Compile>
     <Compile Include="SingleCustomerView.aspx.designer.cs">
       <DependentUpon>SingleCustomerView.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Song.aspx.cs">
-      <DependentUpon>Song.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Song.aspx.designer.cs">
-      <DependentUpon>Song.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -1,6 +1,0 @@
-﻿namespace TestLibrary
-{
-    class Assert
-    {
-    }
-}
