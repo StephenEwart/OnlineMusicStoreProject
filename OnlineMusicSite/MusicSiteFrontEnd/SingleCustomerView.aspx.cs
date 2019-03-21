@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace MusicSiteFrontEnd
 {
-    public partial class MusicSite : System.Web.UI.MasterPage
+    public partial class SingleCustomerView : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void btnCustomer_Click(object sender, EventArgs e)
+        protected void btnBack_Click(object sender, EventArgs e)
         {
             Response.Redirect("CustomerView.aspx");
         }

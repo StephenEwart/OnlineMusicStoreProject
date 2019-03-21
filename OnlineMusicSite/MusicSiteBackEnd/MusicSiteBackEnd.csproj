@@ -75,7 +75,6 @@
     </Compile>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="FrmAddSong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +95,6 @@
 >>>>>>> parent of 9f65a20... Merge branch 'master' into 2103Rhys
 =======
 >>>>>>> parent of 9f65a20... Merge branch 'master' into 2103Rhys
-=======
->>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
     <Compile Include="frmArtistView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,7 +123,6 @@
     </EmbeddedResource>
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
     <EmbeddedResource Include="FrmAddSong.resx">
       <DependentUpon>FrmAddSong.cs</DependentUpon>
 =======
@@ -138,8 +134,6 @@
       <DependentUpon>frmArtistEdit.cs</DependentUpon>
 >>>>>>> parent of 9f65a20... Merge branch 'master' into 2103Rhys
     </EmbeddedResource>
-=======
->>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
     <EmbeddedResource Include="frmArtistView.resx">
       <DependentUpon>frmArtistView.cs</DependentUpon>
     </EmbeddedResource>

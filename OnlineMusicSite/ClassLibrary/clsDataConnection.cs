@@ -47,7 +47,6 @@ public class clsDataConnection
         //                  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=H:\Desktop\PMNewest\OnlineMusicSite\App_Data\musicproject.mdf;Integrated Security=True;Connect Timeout=30
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
         SomePath = "H:\\Desktop\\PMLastSprint\\OnlineMusicSite\\App_Data\\musicproject.mdf";
 
 =======
@@ -56,9 +55,6 @@ public class clsDataConnection
 =======
         SomePath = "C:\\Users\\rhysc\\Desktop\\PMMasterPage\\OnlineMusicSite\\App_Data\\musicproject.mdf";
 >>>>>>> parent of 9f65a20... Merge branch 'master' into 2103Rhys
-=======
-        SomePath = "H:\\Desktop\\PMNewest\\OnlineMusicSite\\App_Data\\musicproject.mdf";
->>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
         connectionString = connectionString.Replace("###", SomePath);
         return connectionString;
     }

@@ -18,7 +18,6 @@ namespace TestLibrary
 
         [TestMethod]
 <<<<<<< HEAD
-<<<<<<< HEAD
         public void SongPropertyOK()
 =======
 
@@ -35,29 +34,25 @@ namespace TestLibrary
         }
 
         public void SongNameOK()
-=======
-        public void SongPropertyOK()
->>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
         {
             //create an instance of the class we want to create
             clsSong ASong = new clsSong();
-            //create some test data to asssign to the property
-            string SomeSong = "Rockstar";
+            //create some test data to assign to the property
+            string SongName = "Difference";
             //assign the data to the property
-            ASong.Song = SomeSong;
+            ASong.Song = SongName;
             //test to see that the two values are the same
-            Assert.AreEqual(ASong.Song, SomeSong);
+            Assert.AreEqual(ASong.Song, SongName);
         }
 
         [TestMethod]
-        public void SongNoPropertyOKK()
+        public void SongArtistOK()
         {
             //create an instance of the class we want to create
             clsSong ASong = new clsSong();
-            //create some test data t assign to the property 
-            Int32 SongNo = 1;
+            //create some test data to assign to the property
+            string SongArtist = "Amrit Maan";
             //assign the data to the property 
-<<<<<<< HEAD
             ASong.SongArtist = SongArtist;
             //test to see that the two values are the same 
             Assert.AreEqual(ASong.Song, SongArtist);
@@ -454,22 +449,6 @@ namespace TestLibrary
             ASong.SongID = SongID;
             //test to see that the two values are the same 
             Assert.AreEqual(ASong.SongID, SongID);
-=======
-            ASong.SongNo = SongNo;
-            //test to see that the two values are the same
-            Assert.AreEqual(ASong.SongNo, SongNo);
-        }
-
-        clsSong ASong = new clsSong();
-        string NewSong = txtSong.Text;
-        if (clsSong.Valid(NewSong) == "")
-        {
-            //do something with the data 
-        }
-        else
-        {
-            //display an error message
->>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
         }
 
         [TestMethod]
@@ -477,20 +456,259 @@ namespace TestLibrary
         {
             //create an instance of the class we want to create
             clsSong ASong = new clsSong();
-<<<<<<< HEAD
             //create a string variable to store the result of the validation 
-=======
-            //create an string variable to store the result of the validation 
->>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
             String Error = "";
-            //create some test data to test the method 
+            //create some test data to test the method
             string SomeSong = "Difference";
             //invoke the method
             Error = ASong.Valid(SomeSong);
-            //test to see that the result is OK i.e. there was no error message returned 
+            //test to see that the result is OK i.e. there was no error message 
             Assert.AreEqual(Error, "");
         }
 
+        [TestMethod]
+        public void FindMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsSong ASong = new clsSong();
+            //boolean variable to store the result of the validation
+            Boolean Found = false;
+            //create some test data to use with the method
+            Int32 SongID = 1;
+            //invoke the method 
+            Found = ASong.Find(SongID);
+            //test to see that the result is correct
+            Assert.IsTrue(Found);
+        }
+
+        [TestMethod]
+        public void TestSongIDFound()
+        {
+            //create an instance of the class we want to create 
+            clsSong ASong = new clsSong();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if darta is OK(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 SongID = 1;
+            //invoke the method 
+            Found = ASong.Find(SongID);
+            //check the song ID
+            if (ASong.SongID != 1)
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestSongNameFound()
+        {
+            //create an instance of the class we want to create
+            clsSong ASong = new clsSong();
+            //boolean variable to store the result of the search
+            Boolean Found = false;
+            //boolean variable to record if data is OK(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            string SongName = "Difference";
+            //invoke the method 
+            Found = ASong.Find(SongName);
+            //check the property
+            if (ASong.SongName != "Test Song Name")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestSongArtistFound()
+        {
+            //create an instance of the class we want to create
+            clsSong ASong = new clsSong();
+            //boolean variable to store the result of the search 
+            Boolean Found = false;
+            //boolean variable to record if data is OK(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method 
+            string SongArtist = "Amrit Maan";
+            //invoke the method
+            Found = ASong.Find(SongArtist);
+            //check the property 
+            if (ASong.SongArtist != "Test Song Artist")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestSongAlbumFound()
+        {
+            //create an instance of the class we want to create
+            clsSong ASong = new clsSong();
+            //boolean variable to store the result of the search 
+            Boolean Found = false;
+            //boolean variable to record if data is OK(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method 
+            string SongAlbum = "DAMN";
+            //invoke the method 
+            Found = ASong.Find(SongAlbum);
+            //check the property 
+            if (ASong.SongAlbum != "Test Song Album")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TestSongGenreFound()
+        {
+            //create an instance of the class we want to create
+            clsSong ASong = new clsSong();
+            //boolean variable to store the result of the search 
+            Boolean Found = false;
+            //boolean variable to record if data is OK(assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method 
+            string SongGenre = "rap";
+            //invoke the method 
+            Found = ASong.Find(SongGenre);
+            //check the property 
+            if (ASong.SongGenre != "Test Song Genre")
+            {
+                OK = false;
+            }
+            //test to see that the result is correct
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void AddMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsSongCollection AllSongs = new clsSongCollection();
+            //create the item of test data 
+            clsSong TestItem = new clsSong();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties 
+            TestItem.SongID = 1;
+            TestItem.SongName = "Issa Jatt";
+            TestItem.SongArtist = "Sidhu Moosewala";
+            TestItem.SongAlbum = "Issa Jatt";
+            TestItem.SongGenre = "Bhangra";
+            //set thisSong to the test data 
+            AllSongs.ThisSong = TestItem;
+            //add the record 
+            PrimaryKey = AllSongs.Add();
+            //set the primary key to the test data 
+            TestItem.SongID = PrimaryKey;
+            //find the record 
+            AllSongs.ThisSong.Find(PrimaryKey);
+            //test to see that the two values are the same 
+            Assert.AreEqual(AllSongs.ThisSong, TestItem);
+        }
+
+        [TestMethod]
+        public void DeleteMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsSongCollection AllSongs = new clsSongCollection();
+            //create the item of test data 
+            clsSong TestItem = new clsSong();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.SongID = 1;
+            TestItem.SongName = "Issa Jatt";
+            TestItem.SongArtist = "Sidhu Moosewala";
+            TestItem.SongAlbum = "Issa Jatt";
+            TestItem.SongGenre = "Bhangra";
+            //set thisSong to the test data 
+            AllSongs.ThisSong = TestItem;
+            //add the record 
+            PrimaryKey = AllSongs.Add();
+            //set the primary key to the test data 
+            TestItem.SongID = PrimaryKey;
+            //find the record 
+            AllSongs.ThisSong.Find(PrimaryKey);
+            //delete the record
+            AllSongs.Delete();
+            //and find the record
+            Boolean Found = AllSongs.ThisSong.Find(PrimaryKey);
+            //test to see that the record was not found
+            Assert.IsFalse(Found);
+        }
+
+        [TestMethod]
+        public void UpdateMethodOK()
+        {
+            //create an instance of the class we want to create
+            clsSongCollection AllSongs = new clsSongCollection();
+            //create the item of test data 
+            clsSong TestItem = new clsSong();
+            //var to store the primary key
+            Int32 PrimaryKey = 0;
+            //set its properties
+            TestItem.SongID = 1;
+            TestItem.SongName = "Issa Jatt";
+            TestItem.SongArtist = "Sidhu Moosewala";
+            TestItem.SongAlbum = "Issa Jatt";
+            TestItem.SongGenre = "Bhangra";
+            //set thisSong to the test data 
+            AllSongs.ThisSong = TestItem;
+            //add the record 
+            PrimaryKey = AllSongs.Add();
+            //set the primary key to the test data 
+            TestItem.SongID = PrimaryKey;
+            //modify the test data
+            TestItem.SongID = 11;
+            TestItem.SongName = "Praise The Lord";
+            TestItem.SongArtist = "ASAP Rocky";
+            TestItem.SongAlbum = "Testing";
+            TestItem.SongGenre = "Rap";
+            //set the record based on the new test data 
+            AllSongs.ThisSong = TestItem;
+            //update the record
+            AllSongs.Update();
+            //find the record
+            AllSongs.ThisSong.Find(PrimaryKey);
+            //test to see thisSong matches the test data
+            Assert.AreEqual(AllSongs.ThisSong, TestItem);
+        }
+
+        [TestMethod]
+        public void ReportBySongNameMethodOK()
+        {
+            //create an instance of the class containing unfiltered results
+            clsSongCollection AllSongs = new clsSongCollection();
+            //create an instance of the filtered data
+            clsSongCollection FilteredSongs = new clsSongCollection();
+            //apply a blank string (should return all records)
+            FilteredSongs.ReportBySongName("");
+            //test to see that the two values are the same
+            Assert.AreEqual(AllSongs.Count, FilteredSongs.Count);
+        }
+
+        [TestMethod]
+        public void ReportBySongNameNoneFound()
+        {
+            //create an instance of the filtered data
+            clsSongCollection FilteredSongs = new clsSongCollection();
+            //apply a song name that does not exist
+            FilteredSongs.ReportBySongName("xxx xxx");
+            //test to see that there are no records
+            Assert.AreEqual(0, FilteredSongs.Count);
+        }
 
 
 >>>>>>> parent of e43c839... Merge pull request #20 from StephenEwart/todays_work
