@@ -19,5 +19,16 @@ namespace MusicSiteBackEnd
         {
          
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        void DisplayAlbum()
+        {
+            ClassLibrary.clsAlbum Albums = new ClassLibrary.clsAlbum();
+            
+        }
     }
 }
