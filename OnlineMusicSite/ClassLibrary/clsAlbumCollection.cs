@@ -46,42 +46,24 @@ namespace ClassLibrary
         //public constructor for the class 
         public clsAlbumCollection()
         {
-            ////create an instance of the album class to store a album
-            //clsAlbum AAlbum = new clsAlbum();
-            ////set the album to 
-            //AAlbum.Album = "Tha Carter V";
-            ////add the album to the private list of alnums
-            //mAllAlbums.Add(AAlbum);
-            ////re initialise the aalbum object to accept a new item
-            //AAlbum = new clsAlbum();
-            ////set the album to the private list of albums 
-            //AAlbum.Album = "KamiKaze";
-            ////add the second album to the private list 
-            //mAllAlbums.Add(AAlbum);
-            //AAlbum = new clsAlbum();
-            ////set the album to the private list of albums 
-            //AAlbum.Album = "Tomorrow";
-            ////add the second album to the private list 
-            //mAllAlbums.Add(AAlbum);
-            ////the private list now contains 2 albums
-
+            Int32 Index = 0;
+            Int32 RecordCount = 0;
             //create an instance of the dataconnection
             clsDataConnection DB = new clsDataConnection();
             //execute the stored procedure to get the list of data
             DB.Execute("sproc_tblAlbum_SelectAll");
             //get the count of records 
-            Int32 RecordCount = DB.Count;
-            //set up the index for the loop
-            Int32 Index = 0;
+            RecordCount = DB.Count;
             //while there are records to process
             while (Index < RecordCount)
             {
                 //create a new instance of the album class
                 clsAlbum AllAlbum = new clsAlbum();
                 //get the album name 
-                AllAlbum.AlbumName = DB.DataTable.Rows[Index]["AlbumName"].ToString();
-                //get the primary key
                 AllAlbum.AlbumID = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
+                AllAlbum.AlbumName = Convert.ToString(DB.DataTable.Rows[Index]["AlbumName"]);
+                AllAlbum.ReleaseDate = Convert.ToDateTime(DB.DataTable.Rows[Index]["ReleaseDate"]);
+                AllAlbum.PriceID = Convert.ToInt32(DB.DataTable.Rows[Index]["PriceID"]);
                 //add the county to the private data member
                 mAlbumsList.Add(AllAlbum);
                 //increment the index 
