@@ -10,9 +10,8 @@ namespace ClassLibrary
     {
         public clsDataConnection dataConnect;
 
-        clsCustomer mThisCustomer = new clsCustomer();
-
-        List<clsCustomer> mCustomerList = new List<clsCustomer>();
+        private clsCustomer mThisCustomer;
+        private List<clsCustomer> mAllCustomers;
 
         public clsCustomer ThisCustomer
         {
@@ -28,9 +27,6 @@ namespace ClassLibrary
 
         public bool Delete(int customerId)
         {
-            clsDataConnection dataConnect = new clsDataConnection();
-            dataConnect.AddParameter("@customerId", customerId);
-            dataConnect.Execute("sproc_tblCustomer_DeleteCustomer");
             return true;
         }
 
@@ -38,42 +34,24 @@ namespace ClassLibrary
         {
             get
             {
-                return dataConnect.Count;
+                return mAllCustomers.Count;
+            }
+            set
+            {
+
             }
         }
         
-        public List<clsCustomer> CustomerList
+        public List<clsCustomer> customerList
         {
             get
             {
-                int recordCount;
-                int index = 0;
-                recordCount = dataConnect.Count;
-
-                while (index < recordCount)
-                {
-                    clsCustomer cust = new clsCustomer();
-                    cust.mCustomerId = Convert.ToInt32(dataConnect.DataTable.Rows[index]["CustomerId"]);
-                    cust.mCustomerName = Convert.ToString(dataConnect.DataTable.Rows[index]["CustomerName"]);
-                    cust.mUsername = Convert.ToString(dataConnect.DataTable.Rows[index]["Username"]);
-                    cust.mEmail = Convert.ToString(dataConnect.DataTable.Rows[index]["Email"]);
-                    cust.mPassword = Convert.ToString(dataConnect.DataTable.Rows[index]["customerPassword"]);
-                    cust.mPhoneNo = Convert.ToString(dataConnect.DataTable.Rows[index]["PhoneNo"]);
-                    cust.mCardDetails = Convert.ToString(dataConnect.DataTable.Rows[index]["CardDetails"]);
-                    cust.mAddress = Convert.ToString(dataConnect.DataTable.Rows[index]["customerAddress"]);
-
-                    mCustomerList.Add(cust);
-
-                    index++;
-                }
-                return mCustomerList;
+                return mAllCustomers;
             }
-        }
-
-        public List<clsCustomer> sortCustomerList()
-        {
-            mCustomerList.Sort();
-            return mCustomerList;
+            set
+            {
+                mAllCustomers = value;
+            }
         }
         
         public int Add()
@@ -100,7 +78,6 @@ namespace ClassLibrary
             dataConnect.AddParameter("@customerName", mThisCustomer.mCustomerName);
             dataConnect.AddParameter("@username", mThisCustomer.mUsername);
             dataConnect.AddParameter("@email", mThisCustomer.mEmail);
-            dataConnect.AddParameter("@password", mThisCustomer.mPassword);
             dataConnect.AddParameter("@phoneNo", mThisCustomer.mPhoneNo);
             dataConnect.AddParameter("@cardDetails", mThisCustomer.mCardDetails);
             dataConnect.AddParameter("@address", mThisCustomer.mAddress);
@@ -108,11 +85,5 @@ namespace ClassLibrary
             dataConnect.Execute("sproc_tblCustomer_UpdateCustomer");
         }
 
-        public void FilterByName(string customerName)
-        {
-            dataConnect = new clsDataConnection();
-            dataConnect.AddParameter("@customerName", customerName);
-            dataConnect.Execute("sproc_tblCustomer_FindCustomer");
-        }
     }
 }

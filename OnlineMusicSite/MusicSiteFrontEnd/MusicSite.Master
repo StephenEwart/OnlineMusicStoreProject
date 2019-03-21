@@ -3,35 +3,19 @@
 <!DOCTYPE html>
 
 <html>
-    <head id="Head1" runat="server">
-        <title>Sample Master Page</title>
-        <link href="StyleSheet.css" rel="stylesheet" type="text/css" />
-    </head>
-
-    <body>
-        <form id="form1" runat="server">
- 
-             <header>
-                Online Music Project
-                 </header>
- 
-            <article>
-                Home Page
-                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-            </article>
- 
-            <nav>
-                Navigation links here
-                <asp:Button ID="btnCustomer" runat="server" OnClick="btnCustomer_Click" style="z-index: 1; left: 22px; top: 55px; position: absolute; height: 57px; width: 175px" Text="Customer" />
-                <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 23px; top: 128px; position: absolute; height: 59px; width: 174px" Text="Button" />
-                <asp:Button ID="Button3" runat="server" style="z-index: 1; left: 27px; top: 204px; position: absolute; height: 60px; width: 169px" Text="Button" />
-                <asp:Button ID="Button4" runat="server" style="z-index: 1; left: 31px; top: 290px; position: absolute; height: 54px; width: 157px" Text="Button" />
-            </nav>
- 
-            <footer>
-                Project Artist Trademark
-            </footer>
-        </form>
-    </body>
+    
+<head runat="server">
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
 </html>

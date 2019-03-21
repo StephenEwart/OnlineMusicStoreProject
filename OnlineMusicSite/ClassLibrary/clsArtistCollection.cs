@@ -12,8 +12,6 @@ namespace ClassLibrary
         private List<clsArtist> mAllArtists = new List<clsArtist>();
         //private data member for the allartists list
         private List<clsArtist> mArtistList = new List<clsArtist>();
-        //private data member thisArtist
-        clsArtist mThisArtist = new clsArtist(); 
 
         public List<clsArtist> ArtistList
         {
@@ -41,6 +39,7 @@ namespace ClassLibrary
             }
         }
 
+<<<<<<< HEAD
         //public property for thisArtist
         public clsArtist ThisArtist
         {
@@ -94,53 +93,35 @@ namespace ClassLibrary
             DB.Execute("sproc_tblArtist_Update");
         }
 
+=======
+>>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
         //public constructor for the class
         public clsArtistCollection()
         {
             //create an instance of the data connection
             clsDataConnection DB = new clsDataConnection();
+<<<<<<< HEAD
             //send the ArtistName parameter to the database
             //DB.AddParameter("@ArtistName", ArtistName);
+=======
+>>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
             //execute the stored procedure to get the list of data
             DB.Execute("sproc_tblArtist_SelectAll");
-            //populate the array list with the data table
-            PopulateArray(DB);
-        }
-
-        public void ReportByArtistName(string ArtistName)
-        {
-            //filters the records based on a full or partial Artist Name
-            //connect to the database
-            clsDataConnection DB = new clsDataConnection();
-            //send the ArtistName parameter to the database
-            DB.AddParameter("@ArtistName", ArtistName);
-            //execute the stored procedure
-            DB.Execute("sproc_tblArtist_FilterByArtistName");
-        }
-
-        void PopulateArray(clsDataConnection DB)
-        {
-            //populates the array list based on the data table in the parameter DB
-            //var for the index
+            //get the count of records 
+            Int32 RecordCount = DB.Count;
+            //set up the index for the loop
             Int32 Index = 0;
-            //var to store the record count
-            Int32 RecordCount;
-            //get the count of records
-            RecordCount = DB.Count;
-            //clear the private array list
-            mArtistList = new List<clsArtist>();
             //while there are records to process
             while (Index < RecordCount)
             {
-                //create a blank address
+                //create a new instance of the artist class
                 clsArtist AnArtist = new clsArtist();
-                //read in the fields from the current record
+                //get the artist name
+                AnArtist.Artist = DB.DataTable.Rows[Index]["ArtistName"].ToString();
+                //get the primary key
                 AnArtist.ArtistID = Convert.ToInt32(DB.DataTable.Rows[Index]["ArtistID"]);
-                AnArtist.ArtistName = Convert.ToString(DB.DataTable.Rows[Index]["ArtistName"]);
-                AnArtist.ArtistGenre = Convert.ToString(DB.DataTable.Rows[Index]["ArtistGenre"]);
-                AnArtist.ArtistBio = Convert.ToString(DB.DataTable.Rows[Index]["ArtistBio"]);
                 //add the artist to the private data member
-                mArtistList.Add(AnArtist);
+                mAllArtists.Add(AnArtist);
                 //increment the index
                 Index++;
             }

@@ -67,29 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Artist.aspx" />
-    <Content Include="CustomerView.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+<<<<<<< HEAD
     <Content Include="SingleCustomerView.aspx" />
+=======
+>>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Artist.aspx.cs">
-      <DependentUpon>Artist.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Artist.aspx.designer.cs">
-      <DependentUpon>Artist.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerView.aspx.cs">
-      <DependentUpon>CustomerView.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CustomerView.aspx.designer.cs">
-      <DependentUpon>CustomerView.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -108,6 +95,7 @@
       <DependentUpon>MusicSite.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="SingleCustomerView.aspx.cs">
       <DependentUpon>SingleCustomerView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +103,8 @@
     <Compile Include="SingleCustomerView.aspx.designer.cs">
       <DependentUpon>SingleCustomerView.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> parent of 75a771a... Merge branch 'master' into todays_work
   </ItemGroup>
   <ItemGroup>
     <Content Include="MusicSite.Master" />
