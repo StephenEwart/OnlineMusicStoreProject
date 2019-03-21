@@ -15,10 +15,16 @@ namespace MusicSiteFrontEnd
    
         }
 
-        public void DisplayCustomer(int customerId)
+        void DisplayCustomers(int custId)
         {
-            
+            clsCustomerCollection collect = new clsCustomerCollection();
+            collect.ThisCustomer.Find(custId);
+            txtName.Text = collect.ThisCustomer.mCustomerName;
+            txtUsername.Text = collect.ThisCustomer.mUsername;
+            txtEmail.Text = collect.ThisCustomer.mEmail;
+            txtPhoneNo.Text = collect.ThisCustomer.mPhoneNo;
         }
+
 
         protected void btnBack_Click(object sender, EventArgs e)
         {
