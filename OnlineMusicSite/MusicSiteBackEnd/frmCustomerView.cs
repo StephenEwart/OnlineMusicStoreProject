@@ -52,7 +52,7 @@ namespace MusicSiteBackEnd
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            frmAddCustomer addCustomer = new frmAddCustomer(lstCustomers.SelectedIndex);
+            frmAddCustomer addCustomer = new frmAddCustomer(Convert.ToInt32(lstCustomers.SelectedItem));
             addCustomer.Show();
         }
 
@@ -62,13 +62,15 @@ namespace MusicSiteBackEnd
             DialogResult dr = MessageBox.Show("Are you sure you want to delete this customer", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.Yes)
             {
-                customer.Delete(Convert.ToInt32(lstCustomers.SelectedValue));
+                customer.Delete(Convert.ToInt32(lstCustomers.SelectedItem));
             }
+            DisplayCustomers("");
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            
+            clsCustomerCollection cust = new clsCustomerCollection();
+            cust.sortCustomerList();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

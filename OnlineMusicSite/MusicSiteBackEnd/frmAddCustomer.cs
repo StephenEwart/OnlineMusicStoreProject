@@ -46,7 +46,7 @@ namespace MusicSiteBackEnd
             clsCustomer cust = new clsCustomer();
             string outcome;
             outcome = cust.InputValidation(txtCustomerName.Text, txtUsername.Text, txtEmail.Text, txtPassword.Text, txtConfirmPassword.Text, txtPhoneNo.Text, txtCardDetails.Text, txtAddress.Text);
-            if (customerId != 0)
+            if (customerId <= 0)
             {
                 if (outcome == "")
                 {

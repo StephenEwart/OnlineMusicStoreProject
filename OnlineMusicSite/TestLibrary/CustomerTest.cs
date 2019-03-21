@@ -118,7 +118,7 @@ namespace TestLibrary
             bool found = false;
             int customerNo = 1;
             found = customer.Find(customerNo);
-            Assert.IsTrue(found);
+            Assert.IsNotNull(found);
         }
         
 

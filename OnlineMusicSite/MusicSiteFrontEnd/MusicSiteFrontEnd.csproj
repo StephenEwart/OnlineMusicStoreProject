@@ -68,12 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Artist.aspx" />
-    <Content Include="Customer.aspx" />
+    <Content Include="CustomerView.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="SingleCustomerView.aspx" />
     <Content Include="StyleSheet.css" />
     <Content Include="Web.config" />
-    <Content Include="CustomerAdd.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Artist.aspx.cs">
@@ -83,12 +83,12 @@
     <Compile Include="Artist.aspx.designer.cs">
       <DependentUpon>Artist.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Customer.aspx.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
+    <Compile Include="CustomerView.aspx.cs">
+      <DependentUpon>CustomerView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Customer.aspx.designer.cs">
-      <DependentUpon>Customer.aspx</DependentUpon>
+    <Compile Include="CustomerView.aspx.designer.cs">
+      <DependentUpon>CustomerView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -108,12 +108,12 @@
       <DependentUpon>MusicSite.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="CustomerAdd.aspx.cs">
-      <DependentUpon>CustomerAdd.aspx</DependentUpon>
+    <Compile Include="SingleCustomerView.aspx.cs">
+      <DependentUpon>SingleCustomerView.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CustomerAdd.aspx.designer.cs">
-      <DependentUpon>CustomerAdd.aspx</DependentUpon>
+    <Compile Include="SingleCustomerView.aspx.designer.cs">
+      <DependentUpon>SingleCustomerView.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

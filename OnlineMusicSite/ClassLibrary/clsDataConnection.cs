@@ -45,7 +45,7 @@ public class clsDataConnection
         //connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"" + GetDBName() + "\";Integrated Security=True;Connect Timeout=30";
         connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"###\";Integrated Security=True;Connect Timeout=30";
         //                  Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=H:\Desktop\PMNewest\OnlineMusicSite\App_Data\musicproject.mdf;Integrated Security=True;Connect Timeout=30
-        SomePath = "C:\\Users\\rhysc\\Desktop\\New folder\\OnlineMusicSite\\App_Data\\musicproject.mdf";
+        SomePath = "H:\\Desktop\\MattDeanWork\\OnlineMusicSite\\App_Data\\musicproject.mdf";
         connectionString = connectionString.Replace("###", SomePath);
         return connectionString;
     }

@@ -13,5 +13,10 @@ namespace MusicSiteFrontEnd
         {
 
         }
+
+        protected void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CustomerView.aspx");
+        }
     }
 }
