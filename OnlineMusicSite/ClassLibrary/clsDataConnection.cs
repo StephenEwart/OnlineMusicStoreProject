@@ -20,6 +20,12 @@ public class clsDataConnection
     SqlCommandBuilder commandBuilder = new SqlCommandBuilder();
     //stores a list of all of the sql parameters
     List<SqlParameter> SQLParams = new List<SqlParameter>();
+
+    public void AddParameter(string v)
+    {
+        throw new NotImplementedException();
+    }
+
     //data table used to store the results of the stored procedure
     DataTable dataTable = new DataTable();
     //string variable used to store the connection string
