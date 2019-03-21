@@ -81,7 +81,7 @@ namespace ClassLibrary
                 //create a new instance of the album class
                 clsAlbum AllAlbum = new clsAlbum();
                 //get the album name 
-                AllAlbum.Album = DB.DataTable.Rows[Index]["Album"].ToString();
+                AllAlbum.AlbumName = DB.DataTable.Rows[Index]["AlbumName"].ToString();
                 //get the primary key
                 AllAlbum.AlbumID = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
                 //add the county to the private data member

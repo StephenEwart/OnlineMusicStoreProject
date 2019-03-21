@@ -22,9 +22,9 @@ namespace TestLibrary
             clsAlbum AnAlbum = new clsAlbum();
             //create some test data to assign to the property
             string SomeAlbum = "Tha Carter V";
-            AnAlbum.Album = SomeAlbum;
+            AnAlbum.AlbumName = SomeAlbum;
             //test to see that the 2 values are the same
-            Assert.AreEqual(AnAlbum.Album, SomeAlbum);
+            Assert.AreEqual(AnAlbum.AlbumName, SomeAlbum);
         }
 
         [TestMethod]
@@ -34,9 +34,9 @@ namespace TestLibrary
             clsAlbum AnAlbum = new clsAlbum();
             //create some test data to assign to the property
             string SomeAlbum = "£9.99";
-            AnAlbum.Album = SomeAlbum;
+            AnAlbum.AlbumName = SomeAlbum;
             //test to see the 2 value are the same 
-            Assert.AreEqual(AnAlbum.Album, SomeAlbum);
+            Assert.AreEqual(AnAlbum.AlbumName, SomeAlbum);
         }
 
         [TestMethod]
@@ -46,9 +46,9 @@ namespace TestLibrary
             clsAlbum AnAlbum = new clsAlbum();
             //create some test data to assign to the property
             string SomeAlbum = "10/11/18";
-            AnAlbum.Album = SomeAlbum;
+            AnAlbum.AlbumName = SomeAlbum;
             //test to see the 2 value are the same 
-            Assert.AreEqual(AnAlbum.Album, SomeAlbum);
+            Assert.AreEqual(AnAlbum.AlbumName, SomeAlbum);
         }
 
         [TestMethod]

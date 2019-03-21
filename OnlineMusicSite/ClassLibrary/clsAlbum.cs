@@ -4,7 +4,7 @@ namespace ClassLibrary
 {
     public class clsAlbum
     {
-        public string Album { get; set; }
+        public string AlbumName { get; set; }
        
         public int AlbumID { get; set; }
 
