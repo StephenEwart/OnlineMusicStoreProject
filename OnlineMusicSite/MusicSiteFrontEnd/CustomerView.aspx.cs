@@ -17,11 +17,25 @@ namespace MusicSiteFrontEnd
 
         public void DisplayCustomers(string nameFilter)
         {
-            clsCustomerCollection cust = new clsCustomerCollection();
-            lstCustomers.DataSource = cust.CustomerList;
-            lstCustomers.DataValueField = "CustomerId";
-            lstCustomers.DataTextField = "CustomerName";
-            lstCustomers.DataBind();
+            //create instance of clsCustomercollection
+            string customerId;
+            string customerName;
+
+            clsCustomerCollection collect = new clsCustomerCollection();
+            int recordCount;
+            int i = 0;
+
+            lstCustomers.Items.Clear();
+            collect.FilterByName(nameFilter);
+            recordCount = collect.Count;
+            while (i < recordCount)
+            {
+                customerId = Convert.ToString(collect.CustomerList[i].mCustomerId);
+                customerName = Convert.ToString(collect.CustomerList[i].mCustomerName);
+                ListItem entry = new ListItem(customerName, customerId);
+                lstCustomers.Items.Add(entry);
+                i++;
+            }
         }
 
         protected void btnSearch_Click(object sender, EventArgs e)
