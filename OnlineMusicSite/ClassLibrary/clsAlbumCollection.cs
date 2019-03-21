@@ -12,39 +12,37 @@ namespace ClassLibrary
         //private List<clsAlbum> AllAlbums { get; set; }
 
         //private data member for the allalbums list 
-        private List<clsAlbum> mAllAlbums = new List<clsAlbum>();
-    
+        private List<clsAlbum> mAlbumsList = new List<clsAlbum>();
+
+        //public property of allAlbums
+        public List<clsAlbum> AlbumsList
+        {
+            //getter sends data to requesting code 
+            get
+            {
+                //retuen the private member
+                return mAlbumsList;
+            }
+            //setter accepts data from other objects 
+            set
+            {
+                //assign the incoming value to private data member 
+                mAlbumsList = value;
+            }
+        }
         //public property for count
         public int Count
         {
             get
             {
                 //return the count property of the private list
-                return mAllAlbums.Count;
+                return mAlbumsList.Count;
             }
             set
             {
                 //
             }
         }
-
-        //public property of allAlbums
-        public List<clsAlbum> AllAlbums
-        {
-            //getter sends data to requesting code 
-            get
-            {
-                //retuen the private member
-                return mAllAlbums;
-            }
-            //setter accepts data from other objects 
-            set
-            {
-                //assign the incoming value to private data member 
-                mAllAlbums = value;
-            }
-        }
-
         //public constructor for the class 
         public clsAlbumCollection()
         {
@@ -85,7 +83,7 @@ namespace ClassLibrary
                 //get the primary key
                 AllAlbum.AlbumID = Convert.ToInt32(DB.DataTable.Rows[Index]["AlbumID"]);
                 //add the county to the private data member
-                mAllAlbums.Add(AllAlbum);
+                mAlbumsList.Add(AllAlbum);
                 //increment the index 
                 Index++;
             }

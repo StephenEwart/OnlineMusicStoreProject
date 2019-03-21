@@ -55,9 +55,9 @@ namespace TestLibrary
             //add the item to the property
             TestList.Add(TestItem);
             //assign the data to the property
-            Albums.AllAlbums = TestList;
+            Albums.AlbumsList = TestList;
             //test to see that the 2 values are the same 
-            Assert.AreEqual(Albums.AllAlbums, TestList);
+            Assert.AreEqual(Albums.AlbumsList, TestList);
         }
 
         public void AlbumMatchesList()
@@ -76,7 +76,7 @@ namespace TestLibrary
             //add the item to the property
             TestList.Add(TestItem);
             //assign the data to the property
-            Albums.AllAlbums = TestList;
+            Albums.AlbumsList = TestList;
             //test to see that the 2 values are the same 
             Assert.AreEqual(Albums.Count, TestList.Count);
         }
