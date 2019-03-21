@@ -117,7 +117,7 @@ namespace ClassLibrary
             //add customerId as parameter
             dataConnect.AddParameter("@CustomerId", customerId);
             //execute
-            dataConnect.Execute("sproc_tblCustomer_FindCustomer");
+            dataConnect.Execute("sproc_tblCustomer_FindCustId");
 
             if (dataConnect.Count == 1)
             {
@@ -126,10 +126,10 @@ namespace ClassLibrary
                 mCustomerName = Convert.ToString(dataConnect.DataTable.Rows[0]["CustomerName"]);
                 mUsername = Convert.ToString(dataConnect.DataTable.Rows[0]["Username"]);
                 mEmail = Convert.ToString(dataConnect.DataTable.Rows[0]["Email"]);
-                mPassword = Convert.ToString(dataConnect.DataTable.Rows[0]["Password"]);
+                mPassword = Convert.ToString(dataConnect.DataTable.Rows[0]["customerPassword"]);
                 mPhoneNo = Convert.ToString(dataConnect.DataTable.Rows[0]["PhoneNo"]);
                 mCardDetails = Convert.ToString(dataConnect.DataTable.Rows[0]["CardDetails"]);
-                mAddress = Convert.ToString(dataConnect.DataTable.Rows[0]["Address"]);
+                mAddress = Convert.ToString(dataConnect.DataTable.Rows[0]["customerAddress"]);
 
                 return true;
             }   

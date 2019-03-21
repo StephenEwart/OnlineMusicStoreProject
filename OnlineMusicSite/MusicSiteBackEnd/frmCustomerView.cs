@@ -29,22 +29,30 @@ namespace MusicSiteBackEnd
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
 
-            DisplayCustomers();
+            DisplayCustomers("");
         }
 
-        void DisplayCustomers()
+        void DisplayCustomers(string nameFilter)
         {
             //create instance of customer collection
             clsCustomerCollection customers = new clsCustomerCollection();
 
-            lstCustomers.DataSource = customers.customerList;
-            lstCustomers.ValueMember = "CustomerId";
-            lstCustomers.DisplayMember = "CustomerName";
+            string customerId;
+            int index = 0;
+            lstCustomers.Items.Clear();
+            customers.FilterByName(nameFilter);
+            int recordCount = customers.Count;
+            while (index < recordCount)
+            {
+                customerId = Convert.ToString(customers.CustomerList[index].mCustomerId);
+                lstCustomers.Items.Add(customerId);
+                index++;
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            frmAddCustomer addCustomer = new frmAddCustomer(lstCustomers.SelectedIndex);
+            frmAddCustomer addCustomer = new frmAddCustomer(Convert.ToInt32(lstCustomers.SelectedItem));
             addCustomer.Show();
         }
 
@@ -54,13 +62,15 @@ namespace MusicSiteBackEnd
             DialogResult dr = MessageBox.Show("Are you sure you want to delete this customer", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (dr == DialogResult.Yes)
             {
-                customer.Delete(Convert.ToInt32(lstCustomers.SelectedValue));
+                customer.Delete(Convert.ToInt32(lstCustomers.SelectedItem));
             }
+            DisplayCustomers("");
         }
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            
+            clsCustomerCollection cust = new clsCustomerCollection();
+            cust.sortCustomerList();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -69,6 +79,16 @@ namespace MusicSiteBackEnd
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
+        {
+            DisplayCustomers(txtSearch.Text);
+        }
+
+        private void btnDisplayAll_Click(object sender, EventArgs e)
+        {
+            DisplayCustomers("");
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
         }
