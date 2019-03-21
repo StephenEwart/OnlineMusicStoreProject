@@ -10,9 +10,17 @@ namespace MusicSiteFrontEnd
 {
     public partial class SingleCustomerView : System.Web.UI.Page
     {
+
+        int customerId;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-   
+            customerId = Convert.ToInt32(Session["customerId"]);
+
+            if (IsPostBack != true)
+            {
+                DisplayCustomers(customerId);
+            }
         }
 
         void DisplayCustomers(int custId)
