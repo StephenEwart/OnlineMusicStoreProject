@@ -34,5 +34,15 @@ namespace MusicSiteFrontEnd
             //bind the data to the list
             lstArtists.DataBind();
         }
+
+        protected void btnDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnFind_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
