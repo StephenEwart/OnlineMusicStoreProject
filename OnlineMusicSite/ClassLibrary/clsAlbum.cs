@@ -37,12 +37,12 @@ namespace ClassLibrary
             get
             {
                 //return private data
-                return AlbumName;
+                return mAlbumName;
             }
             set
             {
                 //set the private data 
-                AlbumName = value;
+                mAlbumName = value;
             }
         }
 
@@ -82,12 +82,12 @@ namespace ClassLibrary
             get
             {
                 //return private data
-                return PriceID;
+                return mPriceID;
             }
             set
             {
                 //set the private data 
-                PriceID = value;
+                mPriceID = value;
             }
         }
 
