@@ -12,6 +12,8 @@ namespace ClassLibrary
 
         clsCustomer mThisCustomer = new clsCustomer();
 
+        List<clsCustomer> mCustomerList = new List<clsCustomer>();
+
         public clsCustomer ThisCustomer
         {
             get
@@ -24,11 +26,12 @@ namespace ClassLibrary
             }
         }
 
-        public void Delete(int customerId)
+        public bool Delete(int customerId)
         {
             clsDataConnection dataConnect = new clsDataConnection();
             dataConnect.AddParameter("@customerId", customerId);
             dataConnect.Execute("sproc_tblCustomer_DeleteCustomer");
+            return true;
         }
 
         public int Count
@@ -43,7 +46,6 @@ namespace ClassLibrary
         {
             get
             {
-                List<clsCustomer> mCustomerList = new List<clsCustomer>();
                 int recordCount;
                 int index = 0;
                 recordCount = dataConnect.Count;
@@ -66,6 +68,12 @@ namespace ClassLibrary
                 }
                 return mCustomerList;
             }
+        }
+
+        public List<clsCustomer> sortCustomerList()
+        {
+            mCustomerList.Sort();
+            return mCustomerList;
         }
         
         public int Add()
@@ -92,6 +100,7 @@ namespace ClassLibrary
             dataConnect.AddParameter("@customerName", mThisCustomer.mCustomerName);
             dataConnect.AddParameter("@username", mThisCustomer.mUsername);
             dataConnect.AddParameter("@email", mThisCustomer.mEmail);
+            dataConnect.AddParameter("@password", mThisCustomer.mPassword);
             dataConnect.AddParameter("@phoneNo", mThisCustomer.mPhoneNo);
             dataConnect.AddParameter("@cardDetails", mThisCustomer.mCardDetails);
             dataConnect.AddParameter("@address", mThisCustomer.mAddress);
@@ -103,7 +112,7 @@ namespace ClassLibrary
         {
             dataConnect = new clsDataConnection();
             dataConnect.AddParameter("@customerName", customerName);
-            dataConnect.Execute("sproc_tblCustomer_FilterByName");
+            dataConnect.Execute("sproc_tblCustomer_FindCustomer");
         }
     }
 }

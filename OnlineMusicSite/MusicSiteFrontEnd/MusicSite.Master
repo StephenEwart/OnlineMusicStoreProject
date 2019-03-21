@@ -23,6 +23,10 @@
  
             <nav>
                 Navigation links here
+                <asp:Button ID="btnCustomer" runat="server" OnClick="btnCustomer_Click" style="z-index: 1; left: 22px; top: 55px; position: absolute; height: 57px; width: 175px" Text="Customer" />
+                <asp:Button ID="Button2" runat="server" style="z-index: 1; left: 23px; top: 128px; position: absolute; height: 59px; width: 174px" Text="Button" />
+                <asp:Button ID="Button3" runat="server" style="z-index: 1; left: 27px; top: 204px; position: absolute; height: 60px; width: 169px" Text="Button" />
+                <asp:Button ID="Button4" runat="server" style="z-index: 1; left: 31px; top: 290px; position: absolute; height: 54px; width: 157px" Text="Button" />
             </nav>
  
             <footer>

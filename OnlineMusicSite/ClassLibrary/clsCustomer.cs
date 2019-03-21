@@ -117,7 +117,7 @@ namespace ClassLibrary
             //add customerId as parameter
             dataConnect.AddParameter("@CustomerId", customerId);
             //execute
-            dataConnect.Execute("sproc_tblCustomer_FindCustomer");
+            dataConnect.Execute("sproc_tblCustomer_FindCustId");
 
             if (dataConnect.Count == 1)
             {
