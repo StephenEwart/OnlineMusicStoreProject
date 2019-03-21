@@ -1,7 +1,9 @@
 ﻿using System;
-using ClassLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TestLibrary
 {
@@ -9,26 +11,31 @@ namespace TestLibrary
     public class SongCollectionTest
     {
         [TestMethod]
+
+
         public void InstanceOK()
         {
-            //create an instance of the class we want to create
+            //create an instance clsSongCollection
             clsSongCollection AllSongs = new clsSongCollection();
-            //test to see that it exists 
+            //test to see that it exists
+
             Assert.IsNotNull(AllSongs);
         }
 
         [TestMethod]
         public void SongCountOK()
         {
-            //create an instance of the class we want to create
+
+            //create an instance of clsSongCollection 
             clsSongCollection AllSongs = new clsSongCollection();
-            //create some test data to assign to the property
+            //create some test data to assign to the property 
             Int32 SomeCount = 5;
-            //assign the data to the property
+            //assign the data to the property 
             AllSongs.Count = SomeCount;
             //test to see that the two values are the same 
             Assert.AreEqual(AllSongs.Count, SomeCount);
         }
+
 
         [TestMethod]
         public void ListAndCountOK()

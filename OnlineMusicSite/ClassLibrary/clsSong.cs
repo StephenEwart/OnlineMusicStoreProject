@@ -93,6 +93,9 @@ namespace ClassLibrary
         public bool Active { get; set; }
         public string Song { get; set; }
 
+        public int SongNo { get; set; }
+
+
         public string Valid(string SongName, string SongArtist, string SongAlbum, string SongGenre)
         {
             string Error = "";
@@ -125,11 +128,6 @@ namespace ClassLibrary
             return Error;
         }
 
-        public string Valid(string songID, string songName, string songArtist, string songAlbum, object songGenre)
-        {
-            throw new NotImplementedException();
-        }
-
         public bool Find(int songID)
         {
             //create an instance of the data connection
@@ -156,26 +154,6 @@ namespace ClassLibrary
                 //return false indicating a problem
                 return false;
             }
-        }
-
-        public string Valid(string songName, string songArtist, string songAlbum, object songGenre)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Find(string songName)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Valid(object songName, string songArtist, string songAlbum, object songGenre)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Valid(string someSong)
-        {
-            throw new NotImplementedException();
         }
     }
 }
