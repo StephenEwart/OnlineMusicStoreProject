@@ -14,7 +14,10 @@ namespace MusicSiteBackEnd
     {
         public frmAddAlbum()
         {
-            InitializeComponent();
+        }
+        private void frmAddAlbum_Load(object sender, EventArgs e)
+        {
+         
         }
     }
 }

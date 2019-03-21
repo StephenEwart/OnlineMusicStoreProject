@@ -46,6 +46,7 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lstAlbums
             // 
@@ -61,9 +62,9 @@
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(127, 29);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(133, 17);
+            this.lblSearch.Size = new System.Drawing.Size(141, 17);
             this.lblSearch.TabIndex = 2;
-            this.lblSearch.Text = "Search For a Album";
+            this.lblSearch.Text = "Search For an Album";
             // 
             // txtAlbumID
             // 

@@ -129,6 +129,7 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "frmAddAlbum";
             this.Text = "frmAddAlbum";
+            this.Load += new System.EventHandler(this.frmAddAlbum_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
