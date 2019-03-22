@@ -34,6 +34,23 @@ namespace TestLibrary
             Assert.IsTrue(result);
         }
         
+        [TestMethod]
+        public void UpdateWorks()
+        {
+            clsCustomerCollection allCustomers = new clsCustomerCollection();
+        }
+
+        /*
+        [TestMethod]
+        public void ListAndCountWorks()
+        {
+            clsCustomerCollection collect = new clsCustomerCollection();
+            List<clsCustomer> testList = new List<clsCustomer>();
+            clsCustomer testITem = new clsCustomer();
+            int manualCount = 2;
+            Assert.AreEqual(All, manualCount);
+        }
+        */
         
         [TestMethod]
         public void AddWorks()
@@ -55,9 +72,9 @@ namespace TestLibrary
 
             testItem.mCustomerId = PK;
 
-            allCustomers.ThisCustomer.Find(PK);
+            bool result = allCustomers.ThisCustomer.Find(PK);
 
-            Assert.AreEqual(allCustomers.ThisCustomer, testItem);
+            Assert.IsTrue(result);
         }         
     }
 }
