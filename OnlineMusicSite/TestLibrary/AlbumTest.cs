@@ -448,7 +448,7 @@ namespace TestLibrary
             //bool variable to store the result of the validation
             Boolean Found = false;
             //create some test data to use with the method
-            Int32 AlbumID = 1;
+            Int32 AlbumID = 3;
             //invoke the method
             Found = AnAlbum.Find(AlbumID);
             //test to see that the result is correct
@@ -465,7 +465,7 @@ namespace TestLibrary
             //bool variable to record if data is ok
             Boolean OK = true;
             //create  some test data to use the mothod 
-            Int32 AlbumID = 1;
+            Int32 AlbumID = 3;
             //invoke the mothod
             Found = AnAlbum.Find(AlbumID);
             //check the album id
@@ -487,7 +487,7 @@ namespace TestLibrary
             //bool variable to record if data is ok
             Boolean OK = true;
             //create  some test data to use the mothod 
-            Int32 AlbumID = 1;
+            Int32 AlbumID = 3;
             //invoke the mothod
             Found = AnAlbum.Find(AlbumID);
             //check the album id
