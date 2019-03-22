@@ -22,7 +22,7 @@ namespace TestLibrary
             //create an instance of clsArtistCollection
             clsArtistCollection AllArtists = new clsArtistCollection();
             //create some test data to asssign to the property
-            Int32 SomeCount = 9;
+            Int32 SomeCount = 3; //number multiplies
             //assign the data to the property
             AllArtists.Count = SomeCount;
             //test to see that the two values are the same
