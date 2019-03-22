@@ -46,14 +46,10 @@ namespace MusicSiteFrontEnd
         protected void btnView_Click(object sender, EventArgs e)
         {
             int customerId;
-
-            if (lstCustomers.SelectedItem != null)
-            {
-                customerId = Convert.ToInt32(lstCustomers.SelectedValue);
+                customerId = Convert.ToInt32(lstCustomers.SelectedIndex);
                 //transfer to single customer view page
                 Session["customerId"] = customerId;
                 Response.Redirect("SingleCustomerView.aspx");
-            }
 
         }
     }
