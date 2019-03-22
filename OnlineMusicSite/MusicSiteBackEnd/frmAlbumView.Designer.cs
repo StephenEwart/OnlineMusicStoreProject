@@ -40,9 +40,10 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(22, 481);
+            this.btnClose.Location = new System.Drawing.Point(16, 391);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(56, 19);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -51,69 +52,76 @@
             // lstAlbums
             // 
             this.lstAlbums.FormattingEnabled = true;
-            this.lstAlbums.ItemHeight = 16;
-            this.lstAlbums.Location = new System.Drawing.Point(130, 114);
+            this.lstAlbums.Location = new System.Drawing.Point(98, 93);
+            this.lstAlbums.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstAlbums.Name = "lstAlbums";
-            this.lstAlbums.Size = new System.Drawing.Size(505, 260);
+            this.lstAlbums.Size = new System.Drawing.Size(380, 212);
             this.lstAlbums.TabIndex = 1;
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(127, 29);
+            this.lblSearch.Location = new System.Drawing.Point(95, 24);
+            this.lblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(141, 17);
+            this.lblSearch.Size = new System.Drawing.Size(106, 13);
             this.lblSearch.TabIndex = 2;
             this.lblSearch.Text = "Search For an Album";
             // 
             // txtAlbumID
             // 
-            this.txtAlbumID.Location = new System.Drawing.Point(130, 68);
+            this.txtAlbumID.Location = new System.Drawing.Point(98, 55);
+            this.txtAlbumID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtAlbumID.Name = "txtAlbumID";
-            this.txtAlbumID.Size = new System.Drawing.Size(409, 22);
+            this.txtAlbumID.Size = new System.Drawing.Size(308, 20);
             this.txtAlbumID.TabIndex = 3;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(560, 67);
+            this.btnSearch.Location = new System.Drawing.Point(420, 54);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(56, 19);
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(264, 407);
+            this.btnEdit.Location = new System.Drawing.Point(198, 331);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(56, 19);
             this.btnEdit.TabIndex = 5;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(372, 407);
+            this.btnSort.Location = new System.Drawing.Point(279, 331);
+            this.btnSort.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.Size = new System.Drawing.Size(56, 19);
             this.btnSort.TabIndex = 6;
             this.btnSort.Text = "Sort";
             this.btnSort.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(468, 407);
+            this.btnDelete.Location = new System.Drawing.Point(351, 331);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(56, 19);
             this.btnDelete.TabIndex = 7;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmAlbumView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 516);
+            this.ClientSize = new System.Drawing.Size(620, 419);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnEdit);
@@ -122,6 +130,7 @@
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lstAlbums);
             this.Controls.Add(this.btnClose);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAlbumView";
             this.Text = "frmAlbumView";
             this.ResumeLayout(false);
