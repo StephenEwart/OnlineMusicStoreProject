@@ -49,13 +49,13 @@ namespace MusicSiteFrontEnd {
         protected global::System.Web.UI.WebControls.Button btnCustomer;
         
         /// <summary>
-        /// Button2 control.
+        /// btnArtist control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
+        protected global::System.Web.UI.WebControls.Button btnArtist;
         
         /// <summary>
         /// Button3 control.
