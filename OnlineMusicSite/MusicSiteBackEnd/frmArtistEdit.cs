@@ -40,7 +40,7 @@ namespace MusicSiteBackEnd
         {
             //call edit artist function
             EditArtist();
-            lblError.Text = " Edit Complete";
+            lblError.Text = " Edit Completed";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
