@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSong.Designer.cs">
+      <DependentUpon>AddSong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddArtist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     <Compile Include="frmCustomerView.Designer.cs">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSongEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSongEdit.Designer.cs">
+      <DependentUpon>frmSongEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIBackEnd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewSong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSong.Designer.cs">
+      <DependentUpon>ViewSong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddSong.resx">
+      <DependentUpon>AddSong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddArtist.resx">
       <DependentUpon>frmAddArtist.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +135,9 @@
     <EmbeddedResource Include="frmCustomerView.resx">
       <DependentUpon>frmCustomerView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSongEdit.resx">
+      <DependentUpon>frmSongEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIBackEnd.resx">
       <DependentUpon>MDIBackEnd.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +150,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewSong.resx">
+      <DependentUpon>ViewSong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
