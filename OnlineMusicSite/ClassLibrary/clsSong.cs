@@ -8,6 +8,89 @@ namespace ClassLibrary
 {
     public class clsSong
     {
+        //private data member for the SongID property
+        private Int32 mSongID;
+        //private data member for the SongName property
+        private string mSongName;
+        //private data member for the SongArtist property
+        private string mSongArtist;
+        //private data member for the SongAlbum property
+        private string mSongAlbum;
+        //private data member for the SongGenre property
+        private string mSongGenre;
+
+        //public property for the song ID 
+        public int SongID
+        {
+            get
+            {
+                //return the private data member 
+                return mSongID;
+            }
+            set
+            {
+                //set the value of the private data member 
+                mSongID = value;
+            }
+        }
+
+        public string SongName
+        {
+            get
+            {
+                //return the private data member
+                return mSongName;
+            }
+            set
+            {
+                //set the value of the private data member 
+                mSongName = value;
+            }
+        }
+
+        public string SongArtist
+        {
+            get
+            {
+                //return the private data member
+                return mSongArtist;
+            }
+            set
+            {
+                //set the value of the private data member
+                mSongArtist = value;
+            }
+        }
+
+        public string SongAlbum
+        {
+            get
+            {
+                //return the private data member
+                return mSongAlbum;
+            }
+            set
+            {
+                //set the value of the private data member
+                mSongAlbum = value;
+            }
+        }
+
+        public string SongGenre
+        {
+            get
+            {
+                //return the private data member
+                return mSongGenre;
+            }
+            set
+            {
+                //set the value of the private data member
+                mSongGenre = value;
+            }
+        }
+
+        public bool Active { get; set; }
         public string Song { get; set; }
 
         public string Valid(string SongName, string SongArtist, string SongAlbum, string SongGenre)
@@ -42,12 +125,6 @@ namespace ClassLibrary
             return Error;
         }
 
-        public string Valid(string songID, string songName, string songArtist, string songAlbum, object songGenre)
-        {
-            throw new NotImplementedException();
-        }
-
-        /*
         public bool Find(int songID)
         {
             //create an instance of the data connection
@@ -74,27 +151,6 @@ namespace ClassLibrary
                 //return false indicating a problem
                 return false;
             }
-        }
-        */
-
-        public string Valid(string songName, string songArtist, string songAlbum, object songGenre)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool Find(string songName)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Valid(object songName, string songArtist, string songAlbum, object songGenre)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Valid(string someSong)
-        {
-            throw new NotImplementedException();
         }
     }
 }

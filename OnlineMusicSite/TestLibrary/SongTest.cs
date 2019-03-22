@@ -17,10 +17,6 @@ namespace TestLibrary
         }
 
         [TestMethod]
-<<<<<<< HEAD
-        public void SongPropertyOK()
-=======
-
         public void SongIDOK()
         {
             //create an instance of the class we want to create
@@ -93,8 +89,11 @@ namespace TestLibrary
             String Error = "";
             //this should fail
             string SongName = "";
+            string SongArtist = "";
+            string SongAlbum = "";
+            string SongGenre = "";
             //invoke the method 
-            Error = ASong.Valid(SongID, SongName, SongArtist, SongAlbum, SongGenre);
+            Error = ASong.Valid(SongName, SongArtist, SongAlbum, SongGenre);
             //test to see that the result is correct
             Assert.AreEqual(Error, "");
         }
@@ -425,7 +424,6 @@ namespace TestLibrary
 
         [TestMethod]
         public void SongAlbumMaxPlusOne()
->>>>>>> parent of e43c839... Merge pull request #20 from StephenEwart/todays_work
         {
             //create an instance of the class we want to create
             clsSong Asong = new clsSong();
@@ -436,8 +434,6 @@ namespace TestLibrary
             //test to see that the two values are the same
             Assert.AreEqual(Asong.Song, SomeSong);
         }
-<<<<<<< HEAD
-=======
 
         public void SongIDPropertyOK()
         {
@@ -449,21 +445,6 @@ namespace TestLibrary
             ASong.SongID = SongID;
             //test to see that the two values are the same 
             Assert.AreEqual(ASong.SongID, SongID);
-        }
-
-        [TestMethod]
-        public void ValidMethodOK()
-        {
-            //create an instance of the class we want to create
-            clsSong ASong = new clsSong();
-            //create a string variable to store the result of the validation 
-            String Error = "";
-            //create some test data to test the method
-            string SomeSong = "Difference";
-            //invoke the method
-            Error = ASong.Valid(SomeSong);
-            //test to see that the result is OK i.e. there was no error message 
-            Assert.AreEqual(Error, "");
         }
 
         [TestMethod]
@@ -513,77 +494,11 @@ namespace TestLibrary
             //boolean variable to record if data is OK(assume it is)
             Boolean OK = true;
             //create some test data to use with the method
-            string SongName = "Difference";
+            int SomeSong = 1;
             //invoke the method 
-            Found = ASong.Find(SongName);
+            Found = ASong.Find(SomeSong);
             //check the property
             if (ASong.SongName != "Test Song Name")
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
-
-        [TestMethod]
-        public void TestSongArtistFound()
-        {
-            //create an instance of the class we want to create
-            clsSong ASong = new clsSong();
-            //boolean variable to store the result of the search 
-            Boolean Found = false;
-            //boolean variable to record if data is OK(assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method 
-            string SongArtist = "Amrit Maan";
-            //invoke the method
-            Found = ASong.Find(SongArtist);
-            //check the property 
-            if (ASong.SongArtist != "Test Song Artist")
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
-
-        [TestMethod]
-        public void TestSongAlbumFound()
-        {
-            //create an instance of the class we want to create
-            clsSong ASong = new clsSong();
-            //boolean variable to store the result of the search 
-            Boolean Found = false;
-            //boolean variable to record if data is OK(assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method 
-            string SongAlbum = "DAMN";
-            //invoke the method 
-            Found = ASong.Find(SongAlbum);
-            //check the property 
-            if (ASong.SongAlbum != "Test Song Album")
-            {
-                OK = false;
-            }
-            //test to see that the result is correct
-            Assert.IsTrue(OK);
-        }
-
-        [TestMethod]
-        public void TestSongGenreFound()
-        {
-            //create an instance of the class we want to create
-            clsSong ASong = new clsSong();
-            //boolean variable to store the result of the search 
-            Boolean Found = false;
-            //boolean variable to record if data is OK(assume it is)
-            Boolean OK = true;
-            //create some test data to use with the method 
-            string SongGenre = "rap";
-            //invoke the method 
-            Found = ASong.Find(SongGenre);
-            //check the property 
-            if (ASong.SongGenre != "Test Song Genre")
             {
                 OK = false;
             }
@@ -710,7 +625,5 @@ namespace TestLibrary
             Assert.AreEqual(0, FilteredSongs.Count);
         }
 
-
->>>>>>> parent of e43c839... Merge pull request #20 from StephenEwart/todays_work
     }
 }
